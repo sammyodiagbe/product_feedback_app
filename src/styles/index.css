@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 * {
   padding: 0;
   margin: 0;
   border: none;
   outline: none;
+  font-family: 'Jost', sans-serif;
 }
 
 button {
@@ -11,6 +13,7 @@ button {
 
 body, html {
   font-size: 16px;
+  font-family: 'Jost', sans-serif;
 }
 
 a {
@@ -40,5 +43,45 @@ div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
 div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container {
   position: fixed;
   top: 80px;
+  background: #ffffff;
+  width: 70vw;
+  left: 100vw;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container.open {
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  left: 20vw;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter, div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-roadmap {
+  padding: 1.5em;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter a {
+  display: inline-block;
+  padding: .5em .9em;
+  margin-right: .7em;
+  margin-bottom: .5em;
+  background: #f2f4ff;
+  color: #4661e6;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter a.active {
+  background: #4661e6;
+  color: #ffffff;
 }
 /*# sourceMappingURL=index.css.map */

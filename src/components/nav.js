@@ -31,9 +31,9 @@ const Nav = (showNavigation) => {
           )}
         </div>
       </div>
-      <div className="pf-filter-roadmap-container">
+      <div className={`pf-filter-roadmap-container ${showSidebar && "open"}`}>
         <div className="pf-filter">
-          <Link>All</Link>
+          <Link className="active">All</Link>
           <Link>UI</Link>
           <Link>UX</Link>
           <Link>Enhancement</Link>
