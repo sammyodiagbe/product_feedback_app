@@ -16,47 +16,109 @@ div.product-app-container {
             padding:0 $padding;
             justify-content: space-between;
             color: #fff;
-        }
-
-        div.pf-filter-roadmap-container {
+        }   
+        div.pf-filter-container {
+            width: 100vw;
             position: fixed;
+            background: rgba(0,0,0,.7);
+            
             top: 80px;
-            background: $white;
-            width: 100vw * 0.7;
             left: 100vw;
-            transition: .3s ease-in-out;
-            &.open {
-                transition: .3s ease-out;
-                left: 100vw * 0.2;
-                
-            }
-            div.pf-filter,div.pf-roadmap {
-                padding: $padding;
-            }
-
-            div.pf-filter{
+                transition: .3s ease-in-out;
+                &.open {
+                    transition: .3s ease-out;
+                    left: 0;
+                    
+                }
+            div.pf-filter-roadmap-container {
+                background: $white;
+                position: relative;
+                width: calc(100% * 0.8);
+                height: calc(100vh - 80px);
+                left: 20%;
                 display: flex;
-                flex-wrap: wrap;
-                a {
-                    display: inline-block;
-                    padding:.5em .9em;
-
-                    margin-right: .7em;
-                    margin-bottom: .5em;
-                    background: $neutral_gray;
-                    color: $bluish_marlin;
-                    border-radius: $border_radius_link;
-                    font-weight: bold;
-                    font-size: .9em;
-                    &.active {
-                        background: $bluish_marlin;
-                        color: $white;
+                flex-direction: column;
+                padding: 2em;
+                align-items: center;
+                background: $neutral_gray;
+                div.pf-filter,div.pf-roadmap {
+                    padding: $padding;
+                    background: #fff;
+                    width: 100%;
+                    border-radius: .8em;
+                }
+    
+                div.pf-filter{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: $padding;
+                    a {
+                        display: inline-block;
+                        padding:.5em $padding;
+    
+                        margin-right: .7em;
+                        margin-bottom: .5em;
+                        background: $neutral_gray;
+                        color: $bluish_marlin;
+                        border-radius: $border_radius_link;
+                        font-weight: bold;
+                        font-size: .9em;
+                        &.active {
+                            background: $bluish_marlin;
+                            color: $white;
+                        }
+                    }
+                }
+                div.pf-roadmap {
+                    // display: flex;
+                    div.pf-roadmap-head {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: $padding;
+                        align-items: center;
+                        width: 100%;
+                        a {
+                            color: $bluish_marlin;
+                            text-decoration: underline;
+                            font-size: .8em;
+                        }
+                    }
+    
+                    div.pf-roadmap-types {
+                        div.pf-roadmap-type {
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: $padding;
+                            justify-content: space-between;
+                            div.pf-type-left {
+                                display: flex;
+                                align-items: center;
+                                span {
+                                    height: 8px;
+                                    width: 8px;
+                                    display: inline-block;
+                                    border-radius: 8px;
+                                    margin-right: .4em;
+                                    &.orange {
+                                        background-color: #F49F85;
+                                    }
+                                    &.purple {
+                                        background-color: #AD1FEA;
+                                    }
+                                    &.blue {
+                                        background-color: #62BCFA;
+                                    }
+                                }
+                            }
+                            b {
+                                display: block;
+                                align-self: flex-end;
+                            }
+                        }
                     }
                 }
             }
-            div.pf-roadmap {
-                // display: flex;
-            }
         }
+
      }
 }

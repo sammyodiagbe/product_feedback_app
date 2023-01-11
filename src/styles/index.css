@@ -5,6 +5,8 @@
   border: none;
   outline: none;
   font-family: 'Jost', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button {
@@ -40,37 +42,61 @@ div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
   color: #fff;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container {
+div.product-app-container nav.pf-navigation div.pf-filter-container {
+  width: 100vw;
   position: fixed;
+  background: rgba(0, 0, 0, 0.7);
   top: 80px;
-  background: #ffffff;
-  width: 70vw;
   left: 100vw;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container.open {
+div.product-app-container nav.pf-navigation div.pf-filter-container.open {
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
-  left: 20vw;
+  left: 0;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter, div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-roadmap {
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container {
+  background: #ffffff;
+  position: relative;
+  width: calc(100% * 0.8);
+  height: calc(100vh - 80px);
+  left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f2f4ff;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter, div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap {
   padding: 1.5em;
+  background: #fff;
+  width: 100%;
+  border-radius: .8em;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter {
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 1.5em;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter a {
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter a {
   display: inline-block;
-  padding: .5em .9em;
+  padding: 0.5em 1.5em;
   margin-right: .7em;
   margin-bottom: .5em;
   background: #f2f4ff;
@@ -80,8 +106,76 @@ div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.
   font-size: .9em;
 }
 
-div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container div.pf-filter a.active {
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter a.active {
   background: #4661e6;
   color: #ffffff;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-head a {
+  color: #4661e6;
+  text-decoration: underline;
+  font-size: .8em;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type div.pf-type-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type div.pf-type-left span {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: .4em;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type div.pf-type-left span.orange {
+  background-color: #F49F85;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type div.pf-type-left span.purple {
+  background-color: #AD1FEA;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type div.pf-type-left span.blue {
+  background-color: #62BCFA;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-roadmap div.pf-roadmap-types div.pf-roadmap-type b {
+  display: block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 /*# sourceMappingURL=index.css.map */

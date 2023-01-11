@@ -31,35 +31,43 @@ const Nav = (showNavigation) => {
           )}
         </div>
       </div>
-      <div className={`pf-filter-roadmap-container ${showSidebar && "open"}`}>
-        <div className="pf-filter">
-          <Link className="active">All</Link>
-          <Link>UI</Link>
-          <Link>UX</Link>
-          <Link>Enhancement</Link>
-          <Link>Bug</Link>
-          <Link>Feature</Link>
-        </div>
-        <div className="pf-roadmap">
-          <div className="pf-roadmap-head">
-            <h1>Roadmap</h1>
-            <Link>View</Link>
+      <div className={`pf-filter-container ${showSidebar && "open"}`}>
+        <div className={`pf-filter-roadmap-container `}>
+          <div className="pf-filter">
+            <Link className="active">All</Link>
+            <Link>UI</Link>
+            <Link>UX</Link>
+            <Link>Enhancement</Link>
+            <Link>Bug</Link>
+            <Link>Feature</Link>
           </div>
-          <div className="pf-roadmap-types">
-            <div className="pf-roadmap-type">
-              <span className="indicator orange"></span>
-              <p className="planned">Planned</p>
-              <b>2</b>
+          <div className="pf-roadmap">
+            <div className="pf-roadmap-head">
+              <h1>Roadmap</h1>
+              <Link>View</Link>
             </div>
-            <div className="pf-roadmap-type">
-              <span className="indicator purple"></span>
-              <p className="planned">In-Progress</p>
-              <b>3</b>
-            </div>
-            <div className="pf-roadmap-type">
-              <span className="indicator blue"></span>
-              <p className="planned">Live</p>
-              <b>1</b>
+            <div className="pf-roadmap-types">
+              <div className="pf-roadmap-type">
+                <div className="pf-type-left">
+                  <span className="indicator orange"></span>
+                  <p className="planned">Planned</p>
+                </div>
+                <b>2</b>
+              </div>
+              <div className="pf-roadmap-type">
+                <div className="pf-type-left">
+                  <span className="indicator purple"></span>
+                  <p className="planned">In-Progress</p>
+                </div>
+                <b>3</b>
+              </div>
+              <div className="pf-roadmap-type">
+                <div className="pf-type-left">
+                  <span className="indicator blue"></span>
+                  <p className="planned">Live</p>
+                </div>
+                <b>1</b>
+              </div>
             </div>
           </div>
         </div>
