@@ -1,1 +1,27 @@
 @import "./reset";
+@import "./variables";
+
+div.product-app-container {
+
+
+    // nmobile-navigation
+     nav.pf-navigation {
+        background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+        background-size: cover;
+        
+        div.pf-navigation-title-container {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding:0 $padding;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        div.pf-filter-roadmap-container {
+            position: fixed;
+            top: 80px;
+
+        }
+     }
+}

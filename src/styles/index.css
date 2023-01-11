@@ -5,11 +5,40 @@
   outline: none;
 }
 
+button {
+  background: transparent;
+}
+
 body, html {
   font-size: 16px;
 }
 
 a {
   text-decoration: none;
+}
+
+div.product-app-container nav.pf-navigation {
+  background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+  background-size: cover;
+}
+
+div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+div.product-app-container nav.pf-navigation div.pf-filter-roadmap-container {
+  position: fixed;
+  top: 80px;
 }
 /*# sourceMappingURL=index.css.map */

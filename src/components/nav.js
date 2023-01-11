@@ -8,8 +8,11 @@ const Nav = (showNavigation) => {
   return showNavigation ? (
     <nav className="pf-navigation">
       <div className="pf-navigation-title-container">
-        <h3>Frontend Mentor</h3>
-        <h4>Feedback Board</h4>
+        <div className="pf-nav-left">
+          <h3>Frontend Mentor</h3>
+          <b>Feedback Board</b>
+        </div>
+
         <div className="pf-navigation-trigger-container">
           {!showSidebar ? (
             <button
@@ -21,7 +24,7 @@ const Nav = (showNavigation) => {
           ) : (
             <button
               className="pf-navigation-trigger"
-              onClick={() => toggleSidebar(true)}
+              onClick={() => toggleSidebar(false)}
             >
               <img src={closeImage} alt="navigation trigger hamburger" />
             </button>
