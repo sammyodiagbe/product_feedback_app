@@ -37,7 +37,29 @@ const Nav = (showNavigation) => {
           <Link>Bug</Link>
           <Link>Feature</Link>
         </div>
-        <div className="pf-roadmap"></div>
+        <div className="pf-roadmap">
+          <div className="pf-roadmap-head">
+            <h1>Roadmap</h1>
+            <Link>View</Link>
+          </div>
+          <div className="pf-roadmap-types">
+            <div className="pf-roadmap-type">
+              <span className="indicator orange"></span>
+              <p className="planned">Planned</p>
+              <b>2</b>
+            </div>
+            <div className="pf-roadmap-type">
+              <span className="indicator purple"></span>
+              <p className="planned">In-Progress</p>
+              <b>3</b>
+            </div>
+            <div className="pf-roadmap-type">
+              <span className="indicator blue"></span>
+              <p className="planned">Live</p>
+              <b>1</b>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   ) : null;
