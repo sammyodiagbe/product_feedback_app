@@ -10,7 +10,7 @@ div.product-app-container {
         background-size: cover;
         
         div.pf-navigation-title-container {
-            height: 80px;
+            height: 90px;
             display: flex;
             align-items: center;
             padding:0 $padding;
@@ -22,11 +22,11 @@ div.product-app-container {
             position: fixed;
             background: rgba(0,0,0,.7);
             
-            top: 80px;
+            top: 90px;
             left: 100vw;
-                transition: .3s ease-in-out;
+                transition: .2s ease-out;
                 &.open {
-                    transition: .3s ease-out;
+                    transition: .2s ease-in;
                     left: 0;
                     
                 }
@@ -120,5 +120,26 @@ div.product-app-container {
             }
         }
 
+     }
+
+     main.pf-main-container {
+
+
+        div.pf-sub-nav {
+            height: 80px;
+            background: $subnav_color;
+            color: $white;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 $padding;
+            align-items: center;
+            a.pf-add-feedback {
+                display: inline-block;
+                padding:.7em $padding ;
+                background: $call_to_action_purple;
+                color: $white;
+                border-radius: $border_radius_link;
+            }
+        }
      }
 }
