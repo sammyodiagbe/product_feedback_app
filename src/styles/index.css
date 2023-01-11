@@ -177,6 +177,7 @@ div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filte
   display: block;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-size: .8em;
 }
 
 div.product-app-container main.pf-main-container div.pf-sub-nav {
