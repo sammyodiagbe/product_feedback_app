@@ -13,7 +13,7 @@ const Suggestions = () => {
       <main className="pf-main-container">
         <SubNav />
         <div className="pf-vertical-list">
-          {!suggestions.length ? "" : <NoSuggestion />}
+          {!suggestions.length ? null : <NoSuggestion />}
         </div>
       </main>
     </React.Fragment>
