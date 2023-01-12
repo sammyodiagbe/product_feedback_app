@@ -10,7 +10,7 @@ const Suggestions = () => {
   const { suggestions } = data;
   const SuggestionStructure = suggestions.length ? (
     suggestions.map((suggestion, index) => {
-      return <Suggestion data={suggestion} />;
+      return <Suggestion data={suggestion} key={index} />;
     })
   ) : (
     <NoSuggestion />
@@ -20,7 +20,7 @@ const Suggestions = () => {
       <Nav />
       <main className="pf-main-container">
         <SubNav />
-        <div className="pf-vertical-list"></div>
+        <div className="pf-vertical-list">{SuggestionStructure}</div>
       </main>
     </React.Fragment>
   );

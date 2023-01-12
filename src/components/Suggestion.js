@@ -2,6 +2,7 @@ import commentIcon from "../assets/shared/icon-comments.svg";
 import arrowUp from "../assets/shared/icon-arrow-up.svg";
 
 const Suggestion = ({ data }) => {
+  console.log(data);
   const { category, comments, title, description, upvotes } = data;
   return (
     <div className="pf-suggestion">
@@ -16,7 +17,7 @@ const Suggestion = ({ data }) => {
       </button>
       <span className="pf-comments">
         <img src={commentIcon} className="pf-comment-icon" />
-        {comments.length}
+        {comments ? comments.length : 0}
       </span>
     </div>
   );
