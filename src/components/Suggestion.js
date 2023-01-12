@@ -1,5 +1,5 @@
 const Suggestion = ({ data }) => {
-  return null;
+  return <div className="pf-suggestion"></div>;
 };
 
 export default Suggestion;
