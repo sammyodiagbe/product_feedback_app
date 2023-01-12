@@ -16,6 +16,7 @@ button {
 body, html {
   font-size: 16px;
   font-family: 'Jost', sans-serif;
+  background: #f2f4ff;
 }
 
 a {
@@ -178,6 +179,37 @@ div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filte
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: .8em;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list {
+  padding: 2em 1.2em;
+  background: #f2f4ff;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback {
+  background-color: #ffffff;
+  padding: 2em;
+  text-align: center;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback h1 {
+  font-size: 18px;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback p {
+  font-size: 13px;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback img, div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback h1, div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback p {
+  margin-bottom: 1.2em;
+}
+
+div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback a {
+  display: inline-block;
+  padding: 0.7em 1.2em;
+  background-color: #AD1FEA;
+  color: #ffffff;
+  border-radius: 8px;
 }
 
 div.product-app-container main.pf-main-container div.pf-sub-nav {

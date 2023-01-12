@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./variables";
+@import "./mixins";
 
 div.product-app-container {
 
@@ -125,7 +126,30 @@ div.product-app-container {
 
      main.pf-main-container {
 
+        div.pf-vertical-list {
+            padding: 2em $padding;
+            background: $neutral_gray;
 
+            div.pf-no-feedback {
+                background-color: $white;
+                padding: 2em;
+                text-align: center;
+
+                h1 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 13px;
+                }
+
+                img, h1, p  {
+                    margin-bottom: $padding;
+                }
+                a {
+                    @include add-feedback-button;
+                }
+            }
+        }
         div.pf-sub-nav {
             height: 80px;
             background: $subnav_color;

@@ -1,0 +1,9 @@
+@import './variables';
+
+@mixin add-feedback-button {
+    display: inline-block;
+    padding: .7em $padding;
+    background-color: $call_to_action_mobile;
+    color: $white;
+    border-radius: 8px;
+}
