@@ -212,6 +212,39 @@ div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-
   border-radius: 8px;
 }
 
+div.product-app-container main.pf-main-container div.pf-suggestion {
+  padding: 1.2em;
+  display: -ms-grid;
+  display: grid;
+  background: #ffffff;
+      grid-template-areas: "pf-details pf-details pf-details" "pf-upvote .  pf-comments";
+  margin-bottom: 1.2em;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: pf-details;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
+  padding: 1.2em;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-upvote-button {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: pf-upvote;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
+  display: inline-block;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: pf-comments;
+}
+
 div.product-app-container main.pf-main-container div.pf-sub-nav {
   height: 80px;
   background: #373F68;

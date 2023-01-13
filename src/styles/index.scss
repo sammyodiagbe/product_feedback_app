@@ -149,6 +149,30 @@ div.product-app-container {
                 }
             }
         }
+        div.pf-suggestion {
+            padding: $padding;
+            display: grid;
+            background: $white;
+            grid-template-areas: "pf-details pf-details pf-details"
+            "pf-upvote .  pf-comments";
+            margin-bottom: $padding;
+            div.pf-details-container {
+                grid-area: pf-details;
+            }
+
+            div.pf-upvote-button, span.pf-comments {
+                padding: $padding;
+            }
+
+            div.pf-upvote-button {
+                grid-area: pf-upvote;
+            }
+
+            span.pf-comments {
+                display: inline-block;
+                grid-area: pf-comments;
+            }
+        }
         div.pf-sub-nav {
             height: 80px;
             background: $subnav_color;
