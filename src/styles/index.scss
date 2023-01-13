@@ -1,7 +1,7 @@
 @import "./reset";
 @import "./mixins";
 
-$space_between_elem: .8em;
+$space_between_elem: .9em;
 
 div.product-app-container {
 
@@ -18,6 +18,8 @@ div.product-app-container {
             padding:0 $padding;
             justify-content: space-between;
             color: #fff;
+            position: sticky;
+            top: 0;
         }   
         div.pf-filter-container {
             width: 100vw;
@@ -157,9 +159,11 @@ div.product-app-container {
             background: $white;
             grid-template-areas: "pf-details pf-details pf-details"
             "pf-upvote .  pf-comments";
+            row-gap: 1em;
             margin-bottom: $padding;
             div.pf-details-container {
                 grid-area: pf-details;
+                margin-bottom: $space_between_elem;
                 h2 {
                     font-size: 20px;
                 }
@@ -179,16 +183,24 @@ div.product-app-container {
 
             }
 
-            div.pf-upvote-button, span.pf-comments {
-                padding: $padding;
+            button.pf-upvote-button, span.pf-comments {
+                padding: .4em $padding;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                min-width: 90px;
+                
             }
 
-            div.pf-upvote-button {
+            button.pf-upvote-button {
                 grid-area: pf-upvote;
+                padding: .7em $padding;
+                background: $neutral_gray;
+                border-radius: $border_radius_link;
             }
 
             span.pf-comments {
-                display: inline-block;
                 grid-area: pf-comments;
             }
         }

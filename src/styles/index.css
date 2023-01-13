@@ -41,6 +41,9 @@ div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 div.product-app-container nav.pf-navigation div.pf-filter-container {
@@ -218,6 +221,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion {
   display: grid;
   background: #ffffff;
       grid-template-areas: "pf-details pf-details pf-details" "pf-upvote .  pf-comments";
+  row-gap: 1em;
   margin-bottom: 1.2em;
 }
 
@@ -226,6 +230,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: pf-details;
+  margin-bottom: 0.9em;
 }
 
 div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2 {
@@ -233,7 +238,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
 }
 
 div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.9em;
 }
 
 div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
@@ -246,18 +251,31 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   font-size: .9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
-  padding: 1.2em;
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
+  padding: 0.4em 1.2em;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-width: 90px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-upvote-button {
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pf-upvote;
+  padding: 0.7em 1.2em;
+  background: #f2f4ff;
+  border-radius: 8px;
 }
 
 div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
-  display: inline-block;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: pf-comments;
