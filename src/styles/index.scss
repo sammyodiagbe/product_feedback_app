@@ -1,6 +1,8 @@
 @import "./reset";
 @import "./mixins";
 
+$space_between_elem: .8em;
+
 div.product-app-container {
 
 
@@ -158,6 +160,23 @@ div.product-app-container {
             margin-bottom: $padding;
             div.pf-details-container {
                 grid-area: pf-details;
+                h2 {
+                    font-size: 20px;
+                }
+                h2,p,span.pf-category {
+                    margin-bottom: $space_between_elem;
+                }
+
+                span.pf-category {
+                    padding:8px .8em;
+                    background: $neutral_gray;
+                    color: $bluish_marlin;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    border-radius: $border_radius_link;
+                    font-size: .9em;
+                }
+
             }
 
             div.pf-upvote-button, span.pf-comments {

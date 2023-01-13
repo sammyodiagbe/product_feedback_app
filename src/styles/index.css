@@ -228,6 +228,24 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   grid-area: pf-details;
 }
 
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2 {
+  font-size: 20px;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
+  margin-bottom: 0.8em;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
+  padding: 8px .8em;
+  background: #f2f4ff;
+  color: #4661e6;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: .9em;
+}
+
 div.product-app-container main.pf-main-container div.pf-suggestion div.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
   padding: 1.2em;
 }

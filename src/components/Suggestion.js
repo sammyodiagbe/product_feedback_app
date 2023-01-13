@@ -7,7 +7,7 @@ const Suggestion = ({ data }) => {
   return (
     <div className="pf-suggestion">
       <div className="pf-details-container">
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <p>{description}</p>
         <span className="pf-category">{category}</span>
       </div>
