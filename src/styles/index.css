@@ -282,6 +282,33 @@ div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comme
   grid-area: pf-comments;
 }
 
+div.product-app-container main.pf-main-container button.pf-custom-drop-down {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.product-app-container main.pf-main-container button.pf-custom-drop-down span {
+  color: #f2f4ff;
+}
+
+div.product-app-container main.pf-main-container button.pf-custom-drop-down span.a {
+  margin-right: .3em;
+}
+
+div.product-app-container main.pf-main-container button.pf-custom-drop-down span.pf-value {
+  margin-right: .5em;
+  font-weight: bold;
+}
+
+div.product-app-container main.pf-main-container button.pf-custom-drop-down img {
+  width: 12px;
+}
+
 div.product-app-container main.pf-main-container div.pf-sub-nav {
   height: 80px;
   background: #373F68;
@@ -296,6 +323,27 @@ div.product-app-container main.pf-main-container div.pf-sub-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+div.product-app-container main.pf-main-container div.pf-sub-nav div.pf-drop-down {
+  width: 300px;
+  position: absolute;
+  background: #ffffff;
+  top: calc(100% + 20px);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+div.product-app-container main.pf-main-container div.pf-sub-nav div.pf-drop-down button.pf-drop-down-item {
+  padding: 1.2em;
+  display: block;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 div.product-app-container main.pf-main-container div.pf-sub-nav a.pf-add-feedback {

@@ -206,6 +206,27 @@ div.product-app-container {
                 grid-area: pf-comments;
             }
         }
+        button.pf-custom-drop-down {
+            color: $white;
+            display: flex;
+            align-items: center;
+            span {
+                color: $neutral_gray;
+
+                &.a {
+
+                    margin-right: .3em;
+                }
+                &.pf-value {
+                    margin-right: .5em;
+                    font-weight: bold;
+                }
+            }
+            img {
+                width: 12px;
+            }
+
+        }
         div.pf-sub-nav {
             height: 80px;
             background: $subnav_color;
@@ -214,6 +235,24 @@ div.product-app-container {
             justify-content: space-between;
             padding: 0 $padding;
             align-items: center;
+            position: relative;
+
+            div.pf-drop-down {
+                width: 300px;
+                position: absolute;
+                background: $white;
+                top: calc(100% + 20px);
+                box-shadow: 0 0 15px rgba(0,0,0,.4);
+                border-radius: $border_radius_link;
+                button.pf-drop-down-item {
+                    padding: $padding;
+                    display: block;
+                    width: 100%;
+                    display: flex;
+                    border-bottom: 1px solid rgba(0,0,0,.1);
+                }
+            }
+
             a.pf-add-feedback {
                 display: inline-block;
                 padding:.7em $padding ;

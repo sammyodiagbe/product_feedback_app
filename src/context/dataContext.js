@@ -1,11 +1,11 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import data from "../data.json";
 
 const currentUser = data.currentUser;
 const requestsData = data.productRequests;
 const suggestion = [];
 const planned = [];
-const inProgress = [];
+const inprogress = [];
 const live = [];
 
 for (let request of requestsData) {
@@ -15,19 +15,28 @@ for (let request of requestsData) {
   } else if (status === "planned") {
     planned.push(request);
   } else if (status === "in-progress") {
-    inProgress.push(request);
+    inprogress.push(request);
   } else if (status === "live") {
     live.push(request);
   }
 }
+export const dataContext = createContext({});
 
-const dataContext = createContext({
-  suggestions: suggestion,
-  planned: planned,
-  inProgress: inProgress,
-  live: live,
-  currentUser: currentUser,
-  roadMap: [...planned, ...inProgress, ...live],
-});
+const DataContextProvider = ({ children }) => {
+  const [suggestions, setSuggestions] = useState(suggestion);
+  const [plans, setPlanned] = useState(planned);
+  const [inProgress, setInProgress] = useState(inprogress);
+  const [liveData, setLive] = useState(live);
+  const [user, setCurrentUser] = useState(currentUser);
+  const [roadMap, setRoadMap] = useState([...planned, ...inProgress, ...live]);
 
-export default dataContext;
+  return (
+    <dataContext.Provider
+      value={{ plans, inProgress, liveData, user, roadMap, suggestions }}
+    >
+      {children}
+    </dataContext.Provider>
+  );
+};
+
+export default DataContextProvider;
