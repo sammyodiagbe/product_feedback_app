@@ -17,28 +17,47 @@ function customDropDown(value, open, toggleFilter) {
 
 const SubNav = () => {
   const context = useContext(dataContext);
+  const {
+    sortByMostUpvotes,
+    sortByLeastUpvotes,
+    sortByMostComments,
+    sortByLeastComments,
+  } = context;
   const [openFilter, toggleFilter] = useState(false);
-  const [value, setValue] = useState("Most comments");
+  const [value, setValue] = useState("Most Upvotes");
   const [activeId, setActiveId] = useState(1);
 
   const toggle = () => {
     toggleFilter(!openFilter);
   };
 
-  const sortByMostUpvotes = () => {
+  const sortByMostUpvotesF = () => {
+    sortByMostUpvotes();
     setActiveId(1);
+    toggleFilter(false);
+    setValue("Most Upvotes");
   };
 
-  const sortByLeastUpvotes = () => {
+  const sortByLeastUpvotesF = () => {
+    console.log("sorting by least upvotes");
+    sortByLeastUpvotes();
     setActiveId(2);
+    toggleFilter(false);
+    setValue("Least Upvotes");
   };
 
-  const sortByMostComments = () => {
+  const sortByMostCommentsF = () => {
+    sortByLeastComments();
     setActiveId(3);
+    toggleFilter(false);
+    setValue("Most Comments");
   };
 
-  const sortByLeastComments = () => {
+  const sortByLeastCommentsF = () => {
+    sortByLeastComments();
     setActiveId(4);
+    toggleFilter(false);
+    setValue("Least Comments");
   };
   return (
     <div className="pf-sub-nav">
@@ -51,19 +70,19 @@ const SubNav = () => {
       <Link className="pf-add-feedback">+ Add Feedback</Link>
       {openFilter && (
         <div className="pf-drop-down">
-          <button className="pf-drop-down-item" onClick={sortByMostUpvotes}>
+          <button className="pf-drop-down-item" onClick={sortByMostUpvotesF}>
             <span>Most Upvotes</span>
             {activeId == 1 && <img src={checkMark} alt="check mark" />}
           </button>
-          <button className="pf-drop-down-item" onClick={sortByLeastUpvotes}>
+          <button className="pf-drop-down-item" onClick={sortByLeastUpvotesF}>
             <span>Least Upvotes</span>
             {activeId == 2 && <img src={checkMark} alt="check mark" />}
           </button>
-          <button className="pf-drop-down-item" onClick={sortByMostComments}>
+          <button className="pf-drop-down-item" onClick={sortByMostCommentsF}>
             <span>Most Comments</span>
             {activeId == 3 && <img src={checkMark} alt="check mark" />}
           </button>
-          <button className="pf-drop-down-item" onClick={sortByLeastComments}>
+          <button className="pf-drop-down-item" onClick={sortByLeastCommentsF}>
             <span>Least Comments</span>
             {activeId == 4 && <img src={checkMark} alt="check mark" />}
           </button>

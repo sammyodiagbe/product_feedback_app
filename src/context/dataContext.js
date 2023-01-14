@@ -30,9 +30,61 @@ const DataContextProvider = ({ children }) => {
   const [user, setCurrentUser] = useState(currentUser);
   const [roadMap, setRoadMap] = useState([...planned, ...inProgress, ...live]);
 
+  const sortByMostUpvotes = () => {
+    let newSuggesstions = [...suggestions];
+    newSuggesstions = newSuggesstions.sort(
+      (value1, value2) => value2.upvotes - value1.upvotes
+    );
+    setSuggestions(newSuggesstions);
+  };
+
+  const sortByLeastUpvotes = () => {
+    let newSuggesstions = [...suggestions];
+    newSuggesstions = newSuggesstions.sort(
+      (value1, value2) => value1.upvotes - value2.upvotes
+    );
+    setSuggestions(newSuggesstions);
+  };
+  const sortByMostComments = () => {
+    let newSuggesstions = [...suggestions];
+    newSuggesstions = newSuggesstions.sort((value1, value2) => {
+      const a = value1.comments ? value1.comments.length : 0;
+      const b = value2.comments ? value2.comments.length : 0;
+
+      console.log(b, " ---- ", a);
+
+      return b - a;
+    });
+    setSuggestions(newSuggesstions);
+  };
+
+  const sortByLeastComments = () => {
+    let newSuggesstions = [...suggestions];
+    newSuggesstions = newSuggesstions.sort((value1, value2) => {
+      const a = value1.comments ? value1.comments.length : 0;
+      const b = value2.comments ? value2.comments.length : 0;
+
+      console.log(a, "  ---- ", b);
+
+      return a - b;
+    });
+    setSuggestions(newSuggesstions);
+  };
+
   return (
     <dataContext.Provider
-      value={{ plans, inProgress, liveData, user, roadMap, suggestions }}
+      value={{
+        plans,
+        inProgress,
+        liveData,
+        user,
+        roadMap,
+        suggestions,
+        sortByMostUpvotes,
+        sortByLeastUpvotes,
+        sortByMostComments,
+        sortByLeastComments,
+      }}
     >
       {children}
     </dataContext.Provider>
