@@ -337,13 +337,14 @@ div.product-app-container main.pf-main-container div.pf-sub-nav div.pf-drop-down
 }
 
 div.product-app-container main.pf-main-container div.pf-sub-nav div.pf-drop-down button.pf-drop-down-item {
-  padding: 1.2em;
+  padding: 1.2em 1.5em;
   display: block;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1em;
 }
 
 div.product-app-container main.pf-main-container div.pf-sub-nav a.pf-add-feedback {
