@@ -246,11 +246,13 @@ div.product-app-container {
                 border-radius: $border_radius_link;
                 button.pf-drop-down-item {
                     padding: $padding 1.5em;
-                    display: block;
                     width: 100%;
                     display: flex;
                     border-bottom: 1px solid rgba(0,0,0,.1);
                     font-size: 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                 }
             }
 
