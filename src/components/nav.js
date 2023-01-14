@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import hamBurgerImage from "../assets/shared/mobile/icon-hamburger.svg";
 import closeImage from "../assets/shared/mobile/icon-close.svg";
 import { Link } from "react-router-dom";
+import dataContext from "../context/dataContext";
 
 const Nav = (showNavigation) => {
+  const data = useContext(dataContext);
+
+  const { planned, live, inProgress } = data;
   const [showSidebar, toggleSidebar] = useState(false);
   return showNavigation ? (
     <nav className="pf-navigation">
@@ -52,21 +56,21 @@ const Nav = (showNavigation) => {
                   <span className="indicator orange"></span>
                   <p className="planned">Planned</p>
                 </div>
-                <b>2</b>
+                <b>{planned.length}</b>
               </div>
               <div className="pf-roadmap-type">
                 <div className="pf-type-left">
                   <span className="indicator purple"></span>
                   <p className="planned">In-Progress</p>
                 </div>
-                <b>3</b>
+                <b>{inProgress.length}</b>
               </div>
               <div className="pf-roadmap-type">
                 <div className="pf-type-left">
                   <span className="indicator blue"></span>
                   <p className="planned">Live</p>
                 </div>
-                <b>1</b>
+                <b>{live.length}</b>
               </div>
             </div>
           </div>

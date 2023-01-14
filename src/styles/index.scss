@@ -10,6 +10,9 @@ div.product-app-container {
      nav.pf-navigation {
         background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
         background-size: cover;
+        position: sticky;
+            top: 0;
+            z-index: 100;
         
         div.pf-navigation-title-container {
             height: 90px;
@@ -18,8 +21,7 @@ div.product-app-container {
             padding:0 $padding;
             justify-content: space-between;
             color: #fff;
-            position: sticky;
-            top: 0;
+            
         }   
         div.pf-filter-container {
             width: 100vw;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Nav from "../components/nav";
 import SubNav from "../components/subnav";
 import dataContext from "../context/dataContext";
@@ -16,13 +16,13 @@ const Suggestions = () => {
     <NoSuggestion />
   );
   return (
-    <React.Fragment>
+    <>
       <Nav />
       <main className="pf-main-container">
         <SubNav />
         <div className="pf-vertical-list">{SuggestionStructure}</div>
       </main>
-    </React.Fragment>
+    </>
   );
 };
 

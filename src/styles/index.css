@@ -26,6 +26,10 @@ a {
 div.product-app-container nav.pf-navigation {
   background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
   background-size: cover;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
@@ -41,9 +45,6 @@ div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 div.product-app-container nav.pf-navigation div.pf-filter-container {
