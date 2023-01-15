@@ -7,7 +7,6 @@ import Suggestion from "../components/Suggestion";
 
 const Suggestions = () => {
   const data = useContext(dataContext);
-  console.log(data);
   const { suggestions } = data;
   const SuggestionStructure = suggestions.length ? (
     suggestions.map((suggestion, index) => {

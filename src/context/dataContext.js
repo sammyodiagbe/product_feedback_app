@@ -71,6 +71,15 @@ const DataContextProvider = ({ children }) => {
     setSuggestions(newSuggesstions);
   };
 
+  const getFeedback = (id) => {
+    for (const feedback of suggestions) {
+      if (feedback.id === parseInt(id)) {
+        return feedback;
+      }
+    }
+    return null;
+  };
+
   return (
     <dataContext.Provider
       value={{
@@ -84,6 +93,7 @@ const DataContextProvider = ({ children }) => {
         sortByLeastUpvotes,
         sortByMostComments,
         sortByLeastComments,
+        getFeedback,
       }}
     >
       {children}
