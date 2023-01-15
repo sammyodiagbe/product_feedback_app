@@ -1,5 +1,5 @@
 const Comment = ({ url, username, id, name, content }) => {
-  const imagesrc = require(url);
+  const imagesrc = require("../assets/user-images/image-suzanne.jpg");
   return (
     <div className="pf-comment">
       <div className="pf-comment-head">
