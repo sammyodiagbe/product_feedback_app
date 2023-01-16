@@ -72,7 +72,7 @@
               "content": "Good point! Using any kind of style extension is great and can be highly customizable, like the ability to change contrast and brightness. I'd prefer not to use one of such extensions, however, for security and privacy reasons.",
               "replyingTo": "annev1990",
               "user": {
-                "image": "./assets/user-images/image-ryan.jpg",
+                "image": "./images/image-ryan.jpg",
                 "name": "Ryan Welles",
                 "username": "voyager.344"
               }
@@ -93,7 +93,7 @@
           "id": 5,
           "content": "Much easier to get answers from devs who can relate, since they've either finished the challenge themselves or are in the middle of it.",
           "user": {
-            "image": "./assets/user-images/image-george.jpg",
+            "image": "./images/image-george.jpg",
             "name": "George Partridge",
             "username": "soccerviewer8"
           }
@@ -112,7 +112,7 @@
           "id": 6,
           "content": "Right now, there is no ability to add images while giving feedback which isn't ideal because I have to use another app to show what I mean",
           "user": {
-            "image": "./assets/user-images/image-javier.jpg",
+            "image": "./images/image-javier.jpg",
             "name": "Javier Pollard",
             "username": "warlikeduke"
           }
@@ -121,7 +121,7 @@
           "id": 7,
           "content": "Yes I'd like to see this as well. Sometimes I want to add a short video or gif to explain the site's behavior..",
           "user": {
-            "image": "./assets/user-images/image-roxanne.jpg",
+            "image": "./images/image-roxanne.jpg",
             "name": "Roxanne Travis",
             "username": "peppersprime32"
           }
@@ -140,7 +140,7 @@
           "id": 8,
           "content": "I also want to be notified when devs I follow submit projects on FEM. Is in-app notification also in the pipeline?",
           "user": {
-            "image": "./assets/user-images/image-victoria.jpg",
+            "image": "./images/image-victoria.jpg",
             "name": "Victoria Mejia",
             "username": "arlen_the_marlin"
           },
@@ -149,7 +149,7 @@
               "content": "Bumping this. It would be good to have a tab with a feed of people I follow so it's easy to see what challenges they’ve done lately. I learn a lot by reading good developers' code.",
               "replyingTo": "arlen_the_marlin",
               "user": {
-                "image": "./assets/user-images/image-zena.jpg",
+                "image": "./images/image-zena.jpg",
                 "name": "Zena Kelley",
                 "username": "velvetround"
               }
@@ -160,7 +160,7 @@
           "id": 9,
           "content": "I've been saving the profile URLs of a few people and I check what they’ve been doing from time to time. Being able to follow them solves that",
           "user": {
-            "image": "./assets/user-images/image-jackson.jpg",
+            "image": "./images/image-jackson.jpg",
             "name": "Jackson Barker",
             "username": "countryspirit"
           }
