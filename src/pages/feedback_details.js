@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import GoBack from "../components/goBack";
 import { dataContext } from "../context/dataContext";
 import arrowUp from "../assets/shared/icon-arrow-up.svg";
@@ -44,7 +44,7 @@ const FeedBackDetails = () => {
   return (
     <>
       <GoBack url={"/"} addFeedBackLink={true} />
-      <main className="pf-main-container">
+      <main className="pf-main-container pf-move-in">
         <div className="pf-feedback-details">
           <div className="pf-details-container">
             <h2>{title}</h2>
@@ -61,7 +61,9 @@ const FeedBackDetails = () => {
           </span>
         </div>
         <div className="pf-comment-container">
-          <div className="pf-total-comments"></div>
+          <div className="pf-total-comments">
+            <h1>{comments ? comments.length : "No"} Comments</h1>
+          </div>
           <div className="pf-comments">{commentStructure}</div>
         </div>
       </main>

@@ -23,6 +23,19 @@ a {
   text-decoration: none;
 }
 
+div.product-app-container div.pf-go-back {
+  padding: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 div.product-app-container nav.pf-navigation {
   background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
   background-size: cover;
@@ -185,6 +198,10 @@ div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filte
   font-size: .8em;
 }
 
+div.product-app-container main.pf-main-container.pf-move-in {
+  padding: 1.2em;
+}
+
 div.product-app-container main.pf-main-container div.pf-vertical-list {
   padding: 2em 1.2em;
   background: #f2f4ff;
@@ -216,7 +233,43 @@ div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-
   border-radius: 8px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion {
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-total-comments {
+  padding: 1.2em;
+  background: #ffffff;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-total-comments h1 {
+  font-size: 24px;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment {
+  padding: 1.2em;
+  background: #ffffff;
+  margin-bottom: 0.9em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-comment-head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto max-content;
+      grid-template-columns: -webkit-max-content auto -webkit-max-content;
+      grid-template-columns: max-content auto max-content;
+  padding-bottom: .8em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-comment-head img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 0.9em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p {
+  text-align: justify;
+  word-spacing: .06em;
+}
+
+div.product-app-container main.pf-main-container div.pf-suggestion, div.product-app-container main.pf-main-container div.pf-feedback-details {
   padding: 1.2em;
   display: -ms-grid;
   display: grid;
@@ -226,7 +279,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion {
   margin-bottom: 1.2em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -234,15 +287,15 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   margin-bottom: 0.9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2 {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container h2 {
   font-size: 20px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container span.pf-category {
   margin-bottom: 0.9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container span.pf-category {
   padding: 8px .8em;
   background: #f2f4ff;
   color: #4661e6;
@@ -252,7 +305,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   font-size: .9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments, div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
   padding: 0.4em 1.2em;
   font-weight: bold;
   display: -webkit-box;
@@ -267,7 +320,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upv
   min-width: 90px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button {
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pf-upvote;
@@ -276,7 +329,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upv
   border-radius: 8px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
+div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: pf-comments;

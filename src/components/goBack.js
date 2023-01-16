@@ -9,7 +9,9 @@ const GoBack = ({ url, addFeedBackLink }) => {
         <span> Go back</span>
       </Link>
 
-      {addFeedBackLink && <Link to={"/edit-feedback/"} />}
+      {addFeedBackLink && (
+        <Link className="add-feedback" to={"/edit-feedback/"} />
+      )}
     </div>
   );
 };
