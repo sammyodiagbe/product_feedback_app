@@ -25,7 +25,7 @@ const FeedBackDetails = () => {
     comments.map((comment, index) => {
       const { id, user, content } = comment;
       const { username, name, image } = user;
-      const url = require("." + image);
+      const url = "." + image;
 
       return (
         <Comment
