@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+div.product-app-container a.pf-add-feedback {
+  display: inline-block;
+  padding: 0.7em 1.2em;
+  background-color: #4661e6;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
 div.product-app-container div.pf-go-back {
   padding: 1.2em;
   display: -webkit-box;
@@ -34,6 +42,10 @@ div.product-app-container div.pf-go-back {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+div.product-app-container div.pf-go-back a.pf-go-back-link {
+  font-weight: bold;
 }
 
 div.product-app-container nav.pf-navigation {
@@ -228,7 +240,7 @@ div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-
 div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-no-feedback a {
   display: inline-block;
   padding: 0.7em 1.2em;
-  background-color: #AD1FEA;
+  background-color: #C75AF6;
   color: #ffffff;
   border-radius: 8px;
 }

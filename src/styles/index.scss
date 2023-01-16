@@ -4,7 +4,9 @@
 $space_between_elem: .9em;
 
 div.product-app-container {
-
+    a.pf-add-feedback {
+        @include add-feedback-button($bluish_marlin);
+    }
 
 
     div.pf-go-back {
@@ -12,6 +14,9 @@ div.product-app-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        a.pf-go-back-link {
+            font-weight: bold;
+        }
     }
     // nmobile-navigation
      nav.pf-navigation {
@@ -161,7 +166,7 @@ div.product-app-container {
                     margin-bottom: $padding;
                 }
                 a {
-                    @include add-feedback-button;
+                    @include add-feedback-button($call_to_action_purple);
                 }
             }
         }
