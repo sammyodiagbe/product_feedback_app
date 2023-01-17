@@ -1,0 +1,55 @@
+@import "./variables";
+
+div.pf-main-container {
+
+    padding:2em $padding;
+
+    div.pf-form-container {
+        background: $white;
+        padding: $padding;
+        border-radius: $border_radius_link;
+
+        img.pf-f-icon {
+            position: relative;
+            top: -3em;
+        }
+        h1.pf-form-title {
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+
+        form {
+            div.pf-input-field {
+                margin-bottom: $space_between_elem;
+                input, textarea, select {
+                    width: 100%;
+                    padding: $padding;
+                    background: $neutral_gray;
+                    margin: .8em 0;
+                    font-size: .9em;
+                    border-radius: $border_radius_link;
+                    resize: none;
+                }
+            }
+
+            div.pf-action-container {
+                button {
+                    display: block;
+                    width: 100%;
+                    color: #fff;
+                    padding: $padding;
+                    border-radius: $border_radius_link;
+                    font-weight: bold;
+                    &.pf-create-account {
+                        background: $call_to_action_purple;
+                        margin-bottom: $space_between_elem;
+                    }
+
+                    &.pf-cancel {
+                        background: $dark_blue;
+                    }
+                }
+            }
+        }
+    }
+}

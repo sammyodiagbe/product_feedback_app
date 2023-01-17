@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
 import GoBack from "../components/goBack";
+import "../styles/feedback.css";
+
+import newFeedbackIcon from "../assets/shared/icon-new-feedback.svg";
 
 const NewFeedback = () => {
   const [category, setCategory] = useState("Feature");
@@ -11,6 +13,7 @@ const NewFeedback = () => {
       <GoBack url={"hello/hello"} />
       <div className="pf-main-container">
         <div className="pf-form-container">
+          <img src={newFeedbackIcon} className="pf-f-icon" />
           <h1 className="pf-form-title">Create New Feedback</h1>
           <form>
             <div className="pf-input-field">
@@ -29,7 +32,13 @@ const NewFeedback = () => {
               <select
                 defaultValue={category}
                 onChange={(target) => setCategory(target.value)}
-              ></select>
+              >
+                <option>Feature</option>
+                <option>Enhancement</option>
+                <option>Bug</option>
+                <option>UI</option>
+                <option>UX</option>
+              </select>
             </div>
             <div className="pf-input-field">
               <b>Feedback Detail</b>
@@ -43,6 +52,10 @@ const NewFeedback = () => {
                 value={feedbackDetails}
                 onChange={(target) => setFeebackDetails(target.value)}
               ></textarea>
+            </div>
+            <div className="pf-action-container">
+              <button className="pf-btn pf-create-account">Add Feedback</button>
+              <button className="pf-btn pf-cancel">Cancel</button>
             </div>
           </form>
         </div>

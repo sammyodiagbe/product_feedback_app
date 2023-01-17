@@ -1,0 +1,52 @@
+div.pf-main-container {
+  padding: 2em 1.2em;
+}
+
+div.pf-main-container div.pf-form-container {
+  background: #ffffff;
+  padding: 1.2em;
+  border-radius: 8px;
+}
+
+div.pf-main-container div.pf-form-container img.pf-f-icon {
+  position: relative;
+  top: -3em;
+}
+
+div.pf-main-container div.pf-form-container h1.pf-form-title {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-input-field {
+  margin-bottom: 0.8em;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-input-field input, div.pf-main-container div.pf-form-container form div.pf-input-field textarea, div.pf-main-container div.pf-form-container form div.pf-input-field select {
+  width: 100%;
+  padding: 1.2em;
+  background: #f2f4ff;
+  margin: .8em 0;
+  font-size: .9em;
+  border-radius: 8px;
+  resize: none;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-action-container button {
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 1.2em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-create-account {
+  background: #C75AF6;
+  margin-bottom: 0.8em;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-cancel {
+  background: #3A4374;
+}
+/*# sourceMappingURL=feedback.css.map */
