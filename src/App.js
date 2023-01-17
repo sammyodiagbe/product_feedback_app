@@ -5,6 +5,7 @@ import { useContext } from "react";
 import DataContextProvider from "./context/dataContext";
 import FeedBackDetails from "./pages/feedback_details";
 import NewFeedback from "./pages/new_feedback";
+import EditFeedback from "./pages/edit_feedback";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/" element={<Suggestions />} />
             <Route exact path="/feedback/:id" element={<FeedBackDetails />} />
             <Route exact path="/new-feedback" element={<NewFeedback />} />
+            <Route exact path="/edit-feedback/:id" element={<EditFeedback />} />
           </Routes>
         </div>
       </DataContextProvider>

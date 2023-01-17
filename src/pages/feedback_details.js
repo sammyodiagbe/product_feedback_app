@@ -8,6 +8,7 @@ import Comment from "../components/comment";
 
 const FeedBackDetails = () => {
   const { id } = useParams();
+  console.log(id);
   const [feedback, setFeedback] = useState({});
   const context = useContext(dataContext);
 
@@ -43,7 +44,7 @@ const FeedBackDetails = () => {
   );
   return (
     <>
-      <GoBack url={"/"} addFeedBackLink={true} />
+      <GoBack url={"/"} addFeedBackLink={true} id={id} data={feedback} />
       <main className="pf-main-container pf-move-in">
         <div className="pf-feedback-details">
           <div className="pf-details-container">

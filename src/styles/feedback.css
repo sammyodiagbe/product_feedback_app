@@ -48,5 +48,10 @@ div.pf-main-container div.pf-form-container form div.pf-action-container button.
 
 div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-cancel {
   background: #3A4374;
+  margin-bottom: 0.8em;
+}
+
+div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-delete {
+  background: #D73737;
 }
 /*# sourceMappingURL=feedback.css.map */
