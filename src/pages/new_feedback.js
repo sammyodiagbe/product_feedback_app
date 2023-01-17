@@ -41,7 +41,7 @@ const NewFeedback = () => {
                 type="text"
                 className="pf-input-field"
                 value={feedbackDetails}
-                onChange={(targer) => setFeebackDetails(target.value)}
+                onChange={(target) => setFeebackDetails(target.value)}
               ></textarea>
             </div>
           </form>
