@@ -1,5 +1,11 @@
+import SubNav from "../components/subnav";
+
 const RoadMap = () => {
-  return null;
+  return (
+    <>
+      <SubNav />
+    </>
+  );
 };
 
 export default RoadMap;

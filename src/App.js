@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Suggestions from "./pages/suggestions";
-import { useContext } from "react";
 import DataContextProvider from "./context/dataContext";
 import FeedBackDetails from "./pages/feedback_details";
 import NewFeedback from "./pages/new_feedback";
 import EditFeedback from "./pages/edit_feedback";
+import RoadMap from "./pages/roadmap";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Route exact path="/feedback/:id" element={<FeedBackDetails />} />
             <Route exact path="/new-feedback" element={<NewFeedback />} />
             <Route exact path="/edit-feedback/:id" element={<EditFeedback />} />
+            <Route exact path="/roadmap" element={<RoadMap />} />
           </Routes>
         </div>
       </DataContextProvider>
