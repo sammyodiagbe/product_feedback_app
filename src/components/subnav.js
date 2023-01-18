@@ -4,6 +4,7 @@ import dropDown from "../assets/shared/icon-arrow-down.svg";
 import dropUp from "../assets/shared/icon-arrow-up.svg";
 import { dataContext } from "../context/dataContext";
 import checkMark from "../assets/shared/icon-check.svg";
+import backArrow from "../assets/shared/icon-arrow-left.svg";
 
 function customDropDown(value, open, toggleFilter) {
   return (
@@ -15,7 +16,7 @@ function customDropDown(value, open, toggleFilter) {
   );
 }
 
-const SubNav = () => {
+const SubNav = ({ hideDrop, showBackLink }) => {
   const context = useContext(dataContext);
   const {
     sortByMostUpvotes,
@@ -47,7 +48,7 @@ const SubNav = () => {
   };
 
   const sortByMostCommentsF = () => {
-    sortByLeastComments();
+    sortByMostComments();
     setActiveId(3);
     toggleFilter(false);
     setValue("Most Comments");
@@ -60,12 +61,21 @@ const SubNav = () => {
     setValue("Least Comments");
   };
   return (
-    <div className="pf-sub-nav">
+    <div className={`pf-sub-nav ${hideDrop && "hide"}`}>
       {/* bulb logo and suggestions total */}
       {/* <div className="pf-sort-by">
         <p>Sort by : </p>
         
       </div> */}
+      {showBackLink && (
+        <div className="go-back">
+          <Link to="">
+            <img src={backArrow} alt="back arrow" /> Go back
+          </Link>
+
+          <h3>Roadmap</h3>
+        </div>
+      )}
       {customDropDown(value, openFilter, toggle)}
       <Link className="pf-add-feedback">+ Add Feedback</Link>
       {openFilter && (

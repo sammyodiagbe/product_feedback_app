@@ -1,0 +1,51 @@
+@import "./variables";
+
+div.pf-sub-nav {
+    color:$white;
+    min-height: 80px;
+    background: $subnav_color;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em $padding;
+    align-items: center;
+    position: relative;
+
+    a {
+        color: $white;
+    }
+    &.hide {
+
+        button.pf-custom-drop-down {
+            display: none ;
+        }
+    }
+
+    div.pf-drop-down {
+
+        width: 300px;
+        position: absolute;
+        background: $white;
+        top: calc(100% + 20px);
+        box-shadow: 0 0 15px rgba(0,0,0,.4);
+        border-radius: $border_radius_link;
+        button.pf-drop-down-item {
+            padding: $padding 1.5em;
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    a.pf-add-feedback {
+        display: inline-block;
+        padding:.7em $padding ;
+        background: $call_to_action_mobile !important; // find easy solution to this later don't use important
+        color: $white;
+        border-radius: $border_radius_link;
+    }
+}

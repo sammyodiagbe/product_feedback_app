@@ -3,7 +3,7 @@ import SubNav from "../components/subnav";
 const RoadMap = () => {
   return (
     <>
-      <SubNav />
+      <SubNav hideDrop={true} showBackLink={true} />
     </>
   );
 };
