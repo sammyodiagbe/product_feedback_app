@@ -28,7 +28,11 @@ const DataContextProvider = ({ children }) => {
   const [inProgress, setInProgress] = useState(inprogress);
   const [liveData, setLive] = useState(live);
   const [user, setCurrentUser] = useState(currentUser);
-  const [roadMap, setRoadMap] = useState([...planned, ...inProgress, ...live]);
+  const [roadMap, setRoadMap] = useState([
+    ...plans,
+    ...inProgress,
+    ...liveData,
+  ]);
 
   const sortByMostUpvotes = () => {
     let newSuggesstions = [...suggestions];

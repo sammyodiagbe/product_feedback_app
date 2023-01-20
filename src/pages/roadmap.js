@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import SubNav from "../components/subnav";
+import { dataContext } from "../context/dataContext";
 
 const RoadMap = () => {
+  const context = useContext(dataContext);
+  const { plans, inProgress, live } = context;
+
+  const toggleClass = (event) => {
+    const { target } = event;
+    const { id } = target.dataset;
+  };
+
   return (
     <>
       <SubNav hideDrop={true} showBackLink={true} />
