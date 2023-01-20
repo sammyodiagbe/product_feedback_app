@@ -33,11 +33,11 @@ const RoadMap = () => {
       {/* road map tracker */}
       <div className="pf-roadmap-nav">
         <div className="pf-nav-top">
-          <button className="pf-switch">Planned({plans.length})</button>
+          <button className="pf-switch">Planned ({plans.length})</button>
           <button className="pf-switch">
-            In-Progress({inProgress.length})
+            In-Progress ({inProgress.length})
           </button>
-          <button className="pf-switch">Live({liveData.length})</button>
+          <button className="pf-switch">Live ({liveData.length})</button>
         </div>
       </div>
       <div className="pf-content">

@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=roadmap.css.map */
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
+  padding: 2em .8em;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+/*# sourceMappingURL=roadmap.css.map */

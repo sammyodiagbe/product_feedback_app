@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAGA,AAIQ,GAJL,AAAA,sBAAsB,CAGrB,GAAG,AAAA,eAAe,CACd,GAAG,AAAA,WAAW,CAAC;EACX,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAa;EACpC,QAAQ,EAAE,QAAQ;CAQrB;;AAfT,AASY,GATT,AAAA,sBAAsB,CAGrB,GAAG,AAAA,eAAe,CACd,GAAG,AAAA,WAAW,CAKV,MAAM,AAAA,UAAU,CAAC;EACb,OAAO,EAAE,QAAQ;EACjB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;CACpB",
     "sources": [
-        "roadmap.scss"
+        "roadmap.scss",
+        "_variables.scss"
     ],
     "names": [],
     "file": "roadmap.css"

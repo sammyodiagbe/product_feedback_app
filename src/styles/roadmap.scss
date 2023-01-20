@@ -1,0 +1,21 @@
+@import "./variables";
+
+
+div.product-app-container {
+
+
+    div.pf-roadmap-nav {
+        div.pf-nav-top {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            position: relative;
+
+            button.pf-switch {
+                padding: 2em .8em;
+                font-size: 14px;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}
