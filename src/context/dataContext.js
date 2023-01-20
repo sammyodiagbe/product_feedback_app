@@ -55,8 +55,6 @@ const DataContextProvider = ({ children }) => {
       const a = value1.comments ? value1.comments.length : 0;
       const b = value2.comments ? value2.comments.length : 0;
 
-      console.log(b, " ---- ", a);
-
       return b - a;
     });
     setSuggestions(newSuggesstions);
