@@ -1,5 +1,5 @@
 import upArrowIcon from "../assets/shared/icon-arrow-up.svg";
-import commentIcon from "../assets/shared/icon-comment.svg";
+import commentIcon from "../assets/shared/icon-comments.svg";
 
 const RoadmapContainer = ({ type, data }) => {
   const { title, upvotes, category, comments, description } = data;
