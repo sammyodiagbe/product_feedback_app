@@ -1,3 +1,7 @@
+div.product-app-container {
+  overflow-x: hidden;
+}
+
 div.product-app-container div.pf-roadmap-nav div.pf-nav-top {
   display: -ms-grid;
   display: grid;
@@ -14,6 +18,69 @@ div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
 }
 
 div.product-app-container div.pf-content {
+  width: 300vw;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  left: 0vw;
+}
+
+div.product-app-container div.pf-content div.pf-r-container {
   padding: 1.2em;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap {
+  background: #ffffff;
+  padding: 1.2em;
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap.pf-orange {
+  border-top: 8px solid #F49F85;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap.pf-purple {
+  border-top: 8px solid #AD1FEA;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap.pf-blue {
+  border-top: 8px solid #62BCFA;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-r {
+  padding: .5em 0;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  margin-right: .4em;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-orange {
+  background: #F49F85;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-purple {
+  background: #AD1FEA;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-blue {
+  background: #62BCFA;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-content-content h1 {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+div.product-app-container div.pf-content div.pf-roadmap div.pf-content-content p {
+  font-size: 14px;
+  margin-bottom: 1em;
 }
 /*# sourceMappingURL=roadmap.css.map */

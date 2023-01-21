@@ -5,13 +5,13 @@ const RoadmapContainer = ({ type, data }) => {
   const { title, upvotes, category, comments, description } = data;
 
   const classname =
-    type === "planned"
+    type === "Planned"
       ? "pf-orange"
       : type === "In Progress"
       ? "pf-purple"
       : "pf-blue";
   return (
-    <div className="pf-roadmap">
+    <div className={`pf-roadmap ${classname}`}>
       <div className="pf-r">
         <span className={`pf-color ${classname}`}></span>{" "}
         <span className="pf-type"> {type}</span>

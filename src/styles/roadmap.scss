@@ -1,8 +1,12 @@
 @import "./variables";
 
+$planned_color: #F49F85;
+$inprogress_color: #AD1FEA;
+$live_color: #62BCFA;
+
 
 div.product-app-container {
-
+overflow-x: hidden;
 
     div.pf-roadmap-nav {
         
@@ -10,7 +14,7 @@ div.product-app-container {
             display: grid;
             grid-template-columns: repeat(3,1fr);
             position: relative;
-
+            
             button.pf-switch {
                 padding: 2em .8em;
                 font-size: 14px;
@@ -19,8 +23,67 @@ div.product-app-container {
             }
         }
     }
-
+    
     div.pf-content {
-        padding:$padding;
+        width: 300vw;
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(3, 1fr);
+        left: 0vw;
+        div.pf-r-container {
+            padding: $padding;
+        }
+        div.pf-roadmap {
+            background: $white;
+            padding: $padding;
+            margin-bottom: 1.5em;
+            border-radius: 8px;
+            &.pf-orange {
+
+                border-top: 8px solid $planned_color;
+            }
+
+            &.pf-purple {
+
+                border-top: 8px solid $inprogress_color;
+            }
+
+            &.pf-blue {
+
+                border-top: 8px solid $live_color;
+            }
+
+            div.pf-r {
+                padding: .5em 0;
+                span.pf-color {
+                    display: inline-block;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 10px;
+                    margin-right: .4em;
+                    &.pf-orange {
+                        background: $planned_color;
+                    }
+                    &.pf-purple {
+                        background: $inprogress_color;
+                    }
+                    &.pf-blue {
+                        background: $live_color;
+                    }
+                }
+            }
+
+            div.pf-content-content {
+                h1 {
+                    font-size: 16px;
+                    margin-bottom: 1em;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-bottom: 1em;
+                }
+            }
+        }
     }
 }
