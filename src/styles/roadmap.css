@@ -17,6 +17,10 @@ div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
   font-weight: bold;
 }
 
+div.product-app-container div.pf-state-details {
+  padding: 0 1.2em;
+}
+
 div.product-app-container div.pf-content {
   width: 300vw;
   display: -ms-grid;
@@ -25,6 +29,20 @@ div.product-app-container div.pf-content {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   left: 0vw;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+
+div.product-app-container div.pf-content.Planned {
+  left: 0;
+}
+
+div.product-app-container div.pf-content.In-Progress {
+  left: -100vw;
+}
+
+div.product-app-container div.pf-content.Live {
+  left: -200vw;
 }
 
 div.product-app-container div.pf-content div.pf-r-container {

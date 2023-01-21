@@ -23,6 +23,10 @@ overflow-x: hidden;
             }
         }
     }
+
+    div.pf-state-details {
+        padding: 0 $padding;
+    }
     
     div.pf-content {
         width: 300vw;
@@ -30,6 +34,17 @@ overflow-x: hidden;
         position: relative;
         grid-template-columns: repeat(3, 1fr);
         left: 0vw;
+        transition: left .5s;
+        &.Planned {
+            left: 0;
+        }
+        &.In-Progress {
+            left: -100vw;
+        }
+
+        &.Live {
+            left: -200vw;
+        }
         div.pf-r-container {
             padding: $padding;
             div.pf-roadmap {
