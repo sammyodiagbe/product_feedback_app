@@ -14,12 +14,26 @@ overflow-x: hidden;
             display: grid;
             grid-template-columns: repeat(3,1fr);
             position: relative;
-            
+            margin-bottom: 1em;
             button.pf-switch {
-                padding: 2em .8em;
+                padding: 1.5em .8em;
                 font-size: 14px;
-                color: black;
+                color: #888;
                 font-weight: bold;
+                border-bottom: 5px solid transparent;
+                transition:border-bottom .2s .5s; 
+                &.active {
+                    color: black;
+                    &:nth-child(1) {
+                        border-bottom:5px solid $planned_color;
+                    }
+                    &:nth-child(2) {
+                        border-bottom:5px solid $inprogress_color;
+                    }
+                    &:nth-child(3) {
+                        border-bottom:5px solid $live_color;
+                    }
+                }
             }
         }
     }
@@ -89,12 +103,12 @@ overflow-x: hidden;
     
                 div.pf-content-content {
                     h1.title {
-                        font-size: 14px !important;
+                        font-size: 18px !important;
                         margin-bottom: 1em;
                     }
     
                     p {
-                        font-size: 12px;
+                        font-size: 16px;
                         margin-bottom: 2em;
                     }
                 }
@@ -104,6 +118,7 @@ overflow-x: hidden;
                     background: $neutral_gray;
                     color: $live_color;
                     font-weight: bold; 
+                    border-radius: 8px;
                 }
                 div.pf-upvote-category {
                     padding: $padding 0;

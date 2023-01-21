@@ -50,21 +50,21 @@ const RoadMap = () => {
       <div className="pf-roadmap-nav">
         <div className="pf-nav-top">
           <button
-            className="pf-switch"
+            className={`pf-switch ${activeState === "Planned" && "active"}`}
             data-name="Planned"
             onClick={changeActiveViewState}
           >
             Planned ({plans.length})
           </button>
           <button
-            className="pf-switch"
+            className={`pf-switch ${activeState === "In-Progress" && "active"}`}
             data-name="In-Progress"
             onClick={changeActiveViewState}
           >
             In-Progress ({inProgress.length})
           </button>
           <button
-            className="pf-switch"
+            className={`pf-switch ${activeState === "Live" && "active"}`}
             data-name="Live"
             onClick={changeActiveViewState}
           >

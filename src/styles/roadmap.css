@@ -8,13 +8,33 @@ div.product-app-container div.pf-roadmap-nav div.pf-nav-top {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   position: relative;
+  margin-bottom: 1em;
 }
 
 div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
-  padding: 2em .8em;
+  padding: 1.5em .8em;
   font-size: 14px;
-  color: black;
+  color: #888;
   font-weight: bold;
+  border-bottom: 5px solid transparent;
+  -webkit-transition: border-bottom .2s .5s;
+  transition: border-bottom .2s .5s;
+}
+
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch.active {
+  color: black;
+}
+
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch.active:nth-child(1) {
+  border-bottom: 5px solid #F49F85;
+}
+
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch.active:nth-child(2) {
+  border-bottom: 5px solid #AD1FEA;
+}
+
+div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch.active:nth-child(3) {
+  border-bottom: 5px solid #62BCFA;
 }
 
 div.product-app-container div.pf-state-details {
@@ -93,12 +113,12 @@ div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.p
 }
 
 div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-content-content h1.title {
-  font-size: 14px !important;
+  font-size: 18px !important;
   margin-bottom: 1em;
 }
 
 div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-content-content p {
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 2em;
 }
 
@@ -107,6 +127,7 @@ div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap span.
   background: #f2f4ff;
   color: #62BCFA;
   font-weight: bold;
+  border-radius: 8px;
 }
 
 div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category {
