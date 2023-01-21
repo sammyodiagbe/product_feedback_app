@@ -69,7 +69,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
       </div> */}
       {showBackLink && (
         <div className="go-back">
-          <Link to="">
+          <Link to="/">
             <img src={backArrow} alt="back arrow" /> Go back
           </Link>
 

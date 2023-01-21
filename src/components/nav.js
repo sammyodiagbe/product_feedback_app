@@ -48,7 +48,7 @@ const Nav = (showNavigation) => {
           <div className="pf-roadmap">
             <div className="pf-roadmap-head">
               <h1>Roadmap</h1>
-              <Link>View</Link>
+              <Link to="/roadmap">View</Link>
             </div>
             <div className="pf-roadmap-types">
               <div className="pf-roadmap-type">
