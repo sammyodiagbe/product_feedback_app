@@ -108,6 +108,8 @@ div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.p
   vertical-align: middle;
   font-size: 1em;
   padding: .4em .6em;
+  color: black;
+  font-weight: bold;
 }
 
 div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category button.pf-upvote {
