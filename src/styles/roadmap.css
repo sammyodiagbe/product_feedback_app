@@ -41,6 +41,10 @@ div.product-app-container div.pf-state-details {
   padding: 0 1.2em;
 }
 
+div.product-app-container div.pf-state-details h1 {
+  font-size: 24px;
+}
+
 div.product-app-container div.pf-content {
   width: 300vw;
   display: -ms-grid;
