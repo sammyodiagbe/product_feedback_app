@@ -16,7 +16,7 @@ const RoadmapContainer = ({ type, data }) => {
         <span className={`pf-color ${classname}`}></span>{" "}
         <span className="pf-type"> {type}</span>
       </div>
-      <div className="pf-content">
+      <div className="pf-content-content">
         <h1>{title}</h1>
         <p>{description}</p>
         <span className="category">{category}</span>

@@ -12,4 +12,8 @@ div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
   color: black;
   font-weight: bold;
 }
+
+div.product-app-container div.pf-content {
+  padding: 1.2em;
+}
 /*# sourceMappingURL=roadmap.css.map */

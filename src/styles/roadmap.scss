@@ -5,6 +5,7 @@ div.product-app-container {
 
 
     div.pf-roadmap-nav {
+        
         div.pf-nav-top {
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -17,5 +18,9 @@ div.product-app-container {
                 font-weight: bold;
             }
         }
+    }
+
+    div.pf-content {
+        padding:$padding;
     }
 }
