@@ -25,7 +25,8 @@ const RoadmapContainer = ({ type, data }) => {
             <img src={upArrowIcon} alt="upvote icon" /> {upvotes}
           </button>
           <button className="pf-comments">
-            <img src={commentIcon} alt="comments icon" /> {comments.length}
+            <img src={commentIcon} alt="comments icon" />{" "}
+            {comments ? comments.length : 0}
           </button>
         </div>
       </div>

@@ -5,7 +5,6 @@ import { dataContext } from "../context/dataContext";
 
 const RoadMap = () => {
   const context = useContext(dataContext);
-  console.log(context);
   const { plans, inProgress, liveData } = context;
   const [activeState, setActiveState] = useState("Planned");
   const [movementClass, setMovementClass] = useState("Planned");
@@ -14,13 +13,13 @@ const RoadMap = () => {
     return <RoadmapContainer data={plan} type="Planned" key={index} />;
   });
 
-  const renderInProgress = plans.map((inprogress, index) => {
+  const renderInProgress = inProgress.map((inprogress, index) => {
     return (
       <RoadmapContainer data={inprogress} type="In Progress" key={index} />
     );
   });
 
-  const renderLive = plans.map((live, index) => {
+  const renderLive = liveData.map((live, index) => {
     return <RoadmapContainer data={live} type="Live" key={index} />;
   });
 
