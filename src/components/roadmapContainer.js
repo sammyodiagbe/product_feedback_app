@@ -17,7 +17,7 @@ const RoadmapContainer = ({ type, data }) => {
         <span className="pf-type"> {type}</span>
       </div>
       <div className="pf-content-content">
-        <h1>{title}</h1>
+        <h1 className="title">{title}</h1>
         <p>{description}</p>
         <span className="category">{category}</span>
         <div className="pf-upvote-category">

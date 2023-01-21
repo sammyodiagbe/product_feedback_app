@@ -31,30 +31,30 @@ div.product-app-container div.pf-content div.pf-r-container {
   padding: 1.2em;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap {
   background: #ffffff;
   padding: 1.2em;
   margin-bottom: 1.5em;
   border-radius: 8px;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap.pf-orange {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap.pf-orange {
   border-top: 8px solid #F49F85;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap.pf-purple {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap.pf-purple {
   border-top: 8px solid #AD1FEA;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap.pf-blue {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap.pf-blue {
   border-top: 8px solid #62BCFA;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-r {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-r {
   padding: .5em 0;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-r span.pf-color {
   display: inline-block;
   height: 10px;
   width: 10px;
@@ -62,25 +62,63 @@ div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color {
   margin-right: .4em;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-orange {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-r span.pf-color.pf-orange {
   background: #F49F85;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-purple {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-r span.pf-color.pf-purple {
   background: #AD1FEA;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-r span.pf-color.pf-blue {
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-r span.pf-color.pf-blue {
   background: #62BCFA;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-content-content h1 {
-  font-size: 16px;
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-content-content h1.title {
+  font-size: 14px !important;
   margin-bottom: 1em;
 }
 
-div.product-app-container div.pf-content div.pf-roadmap div.pf-content-content p {
-  font-size: 14px;
-  margin-bottom: 1em;
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-content-content p {
+  font-size: 12px;
+  margin-bottom: 2em;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap span.category {
+  padding: .6em;
+  background: #f2f4ff;
+  color: #62BCFA;
+  font-weight: bold;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category {
+  padding: 1.2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category button {
+  vertical-align: middle;
+  font-size: 1em;
+  padding: .4em .6em;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category button.pf-upvote {
+  background: #f2f4ff;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category button.pf-upvote img {
+  margin-right: .3em;
+}
+
+div.product-app-container div.pf-content div.pf-r-container div.pf-roadmap div.pf-upvote-category button.pf-comments img {
+  margin-right: .3em;
 }
 /*# sourceMappingURL=roadmap.css.map */
