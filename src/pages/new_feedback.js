@@ -10,7 +10,7 @@ const NewFeedback = () => {
   const [feedbackDetails, setFeebackDetails] = useState("");
   return (
     <>
-      <GoBack url={"hello/hello"} addFeedBackLink={true} />
+      <GoBack url={"hello/hello"} addFeedBackLink={false} />
       <div className="pf-main-container">
         <div className="pf-form-container">
           <img src={newFeedbackIcon} className="pf-f-icon" />
