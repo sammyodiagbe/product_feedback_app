@@ -77,7 +77,9 @@ const SubNav = ({ hideDrop, showBackLink }) => {
         </div>
       )}
       {customDropDown(value, openFilter, toggle)}
-      <Link className="pf-add-feedback">+ Add Feedback</Link>
+      <Link className="pf-add-feedback" to="/new-feedback">
+        + Add Feedback
+      </Link>
       {openFilter && (
         <div className="pf-drop-down">
           <button className="pf-drop-down-item" onClick={sortByMostUpvotesF}>
