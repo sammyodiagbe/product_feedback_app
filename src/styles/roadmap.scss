@@ -15,6 +15,7 @@ overflow-x: hidden;
             grid-template-columns: repeat(3,1fr);
             position: relative;
             margin-bottom: 1em;
+            transition: border-bottom .5s;
             button.pf-switch {
                 padding: 1.5em .8em;
                 font-size: 14px;

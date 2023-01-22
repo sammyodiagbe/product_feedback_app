@@ -9,6 +9,8 @@ div.product-app-container div.pf-roadmap-nav div.pf-nav-top {
       grid-template-columns: repeat(3, 1fr);
   position: relative;
   margin-bottom: 1em;
+  -webkit-transition: border-bottom .5s;
+  transition: border-bottom .5s;
 }
 
 div.product-app-container div.pf-roadmap-nav div.pf-nav-top button.pf-switch {
