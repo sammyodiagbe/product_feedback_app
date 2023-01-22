@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import dropDown from "../assets/shared/icon-arrow-down.svg";
 import dropUp from "../assets/shared/icon-arrow-up.svg";
 import { dataContext } from "../context/dataContext";
@@ -18,6 +18,10 @@ function customDropDown(value, open, toggleFilter) {
 
 const SubNav = ({ hideDrop, showBackLink }) => {
   const context = useContext(dataContext);
+  const { state, pathname } = useLocation();
+  const { prev_url } = state || {};
+
+  console.log(pathname);
   const {
     sortByMostUpvotes,
     sortByLeastUpvotes,
@@ -69,7 +73,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
       </div> */}
       {showBackLink && (
         <div className="go-back">
-          <Link to="/">
+          <Link to={prev_url || "/"}>
             <img src={backArrow} alt="back arrow" /> Go back
           </Link>
 
@@ -77,7 +81,11 @@ const SubNav = ({ hideDrop, showBackLink }) => {
         </div>
       )}
       {customDropDown(value, openFilter, toggle)}
-      <Link className="pf-add-feedback" to="/new-feedback">
+      <Link
+        className="pf-add-feedback"
+        to="/new-feedback"
+        state={{ prev_url: pathname }}
+      >
         + Add Feedback
       </Link>
       {openFilter && (

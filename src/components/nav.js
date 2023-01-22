@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
 import hamBurgerImage from "../assets/shared/mobile/icon-hamburger.svg";
 import closeImage from "../assets/shared/mobile/icon-close.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
 
 const Nav = (showNavigation) => {
   const data = useContext(dataContext);
+  const { pathname } = useLocation();
 
   const { plans, liveData, inProgress } = data;
   const [showSidebar, toggleSidebar] = useState(false);
@@ -48,7 +49,9 @@ const Nav = (showNavigation) => {
           <div className="pf-roadmap">
             <div className="pf-roadmap-head">
               <h1>Roadmap</h1>
-              <Link to="/roadmap">View</Link>
+              <Link to="/roadmap" state={{ prev_url: pathname }}>
+                View
+              </Link>
             </div>
             <div className="pf-roadmap-types">
               <div className="pf-roadmap-type">
