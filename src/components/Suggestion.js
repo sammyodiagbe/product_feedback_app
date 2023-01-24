@@ -5,15 +5,15 @@ const Suggestion = ({ data }) => {
   const { category, comments, title, description, upvotes } = data;
   return (
     <div className="pf-suggestion">
+      <button className="pf-upvote-button">
+        <img className="pf-arrow-button" src={arrowUp} />
+        <span className="pf-upvote">{upvotes}</span>
+      </button>
       <div className="pf-details-container">
         <h2>{title}</h2>
         <p>{description}</p>
         <span className="pf-category">{category}</span>
       </div>
-      <button className="pf-upvote-button">
-        <img className="pf-arrow-button" src={arrowUp} />
-        <span className="pf-upvote">{upvotes}</span>
-      </button>
       <span className="pf-comments">
         <img src={commentIcon} className="pf-comment-icon" />
         {comments ? comments.length : 0}

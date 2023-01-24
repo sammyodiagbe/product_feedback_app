@@ -26,6 +26,19 @@
             
             div.pf-vertical-list {
                 padding: $padding 0;
+
+                div.pf-suggestion {
+                    grid-template-areas: "pf-upvote pf-details pf-comments";
+                    grid-template-columns:min-content auto min-content;
+                    grid-gap: 24px;
+
+                    button.pf-upvote-button {
+                        align-self: flex-start;
+                        flex-direction: column;
+                        padding: $padding 5px;
+                        min-width: 50px;
+                    }
+                }
             }
         }
         nav.pf-navigation {

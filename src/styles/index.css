@@ -409,6 +409,23 @@ div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom
   div.product-app-container main.pf-main-container div.pf-vertical-list {
     padding: 1.2em 0;
   }
+  div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-suggestion {
+        grid-template-areas: "pf-upvote pf-details pf-comments";
+    -ms-grid-columns: min-content auto min-content;
+        grid-template-columns: -webkit-min-content auto -webkit-min-content;
+        grid-template-columns: min-content auto min-content;
+    grid-gap: 24px;
+  }
+  div.product-app-container main.pf-main-container div.pf-vertical-list div.pf-suggestion button.pf-upvote-button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.2em 5px;
+    min-width: 50px;
+  }
   div.product-app-container nav.pf-navigation {
     display: -ms-grid;
     display: grid;
