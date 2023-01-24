@@ -13,6 +13,9 @@
             div.pf-sub-nav {
                 border-radius: 8px;
             }
+            div.pf-vertical-list {
+                padding: $padding 0;
+            }
         }
         nav.pf-navigation {
             display: grid;
@@ -24,7 +27,7 @@
             div.pf-navigation-title-container {
                 align-items: flex-end;
                 background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
-                background-position: center;
+                background-position: bottom;
                 border-radius: 8px;
                 background-size:cover;
                 height: auto;
