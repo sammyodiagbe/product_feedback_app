@@ -347,7 +347,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comme
   grid-area: pf-comments;
 }
 
-div.product-app-container main.pf-main-container button.pf-custom-drop-down {
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down {
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,20 +357,35 @@ div.product-app-container main.pf-main-container button.pf-custom-drop-down {
           align-items: center;
 }
 
-div.product-app-container main.pf-main-container button.pf-custom-drop-down span {
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down div.pf-total-suggesstions {
+  display: none;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down div.pf-total-suggesstions img {
+  margin-right: 8px;
+  width: 15px;
+}
+
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down div.pf-total-suggesstions b {
+  font-size: 16px;
+}
+
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down span {
   color: #f2f4ff;
 }
 
-div.product-app-container main.pf-main-container button.pf-custom-drop-down span.a {
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down span.a {
   margin-right: .3em;
 }
 
-div.product-app-container main.pf-main-container button.pf-custom-drop-down span.pf-value {
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down span.pf-value {
   margin-right: .5em;
   font-weight: bold;
 }
 
-div.product-app-container main.pf-main-container button.pf-custom-drop-down img {
+div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down img {
   width: 12px;
 }
 
@@ -380,6 +395,16 @@ div.product-app-container main.pf-main-container button.pf-custom-drop-down img 
   }
   div.product-app-container main.pf-main-container div.pf-sub-nav {
     border-radius: 8px;
+  }
+  div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down {
+    border-radius: 8px;
+  }
+  div.product-app-container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down div.pf-total-suggesstions {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 10px;
   }
   div.product-app-container main.pf-main-container div.pf-vertical-list {
     padding: 1.2em 0;

@@ -5,10 +5,15 @@ import dropUp from "../assets/shared/icon-arrow-up.svg";
 import { dataContext } from "../context/dataContext";
 import checkMark from "../assets/shared/icon-check.svg";
 import backArrow from "../assets/shared/icon-arrow-left.svg";
+import suggestionIcon from "../assets/suggestions/icon-suggestions.svg";
 
-function customDropDown(value, open, toggleFilter) {
+function customDropDown(value, open, toggleFilter, suggesstionsLength) {
   return (
     <button className="pf-custom-drop-down" onClick={toggleFilter}>
+      <div className="pf-total-suggesstions">
+        <img src={suggestionIcon} alt="Suggestion Icon" />
+        <b className="pf-text">{suggesstionsLength} Suggestions</b>
+      </div>
       <span className="a">Sort by :</span>
       <span className="pf-value">{value}</span>
       <img src={open ? dropUp : dropDown} alt="drop icon" />
@@ -27,6 +32,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
     sortByLeastUpvotes,
     sortByMostComments,
     sortByLeastComments,
+    suggestions,
   } = context;
   const [openFilter, toggleFilter] = useState(false);
   const [value, setValue] = useState("Most Upvotes");
@@ -80,7 +86,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
           <h3>Roadmap</h3>
         </div>
       )}
-      {customDropDown(value, openFilter, toggle)}
+      {customDropDown(value, openFilter, toggle, suggestions.length)}
       <Link
         className="pf-add-feedback"
         to="/new-feedback"

@@ -6,13 +6,24 @@
     div.product-app-container {
         
         // main-container }
-
+        
         main.pf-main-container {
             padding: $padding;
-
+            
             div.pf-sub-nav {
                 border-radius: 8px;
+                    button.pf-custom-drop-down {
+                    border-radius: 8px;
+                    div.pf-total-suggesstions {
+                        display: block ;
+                        align-items: center;
+                        margin-right: 10px;
+                        
+                    }
+                }
             }
+            
+            
             div.pf-vertical-list {
                 padding: $padding 0;
             }
