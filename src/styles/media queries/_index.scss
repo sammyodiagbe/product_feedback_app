@@ -1,0 +1,58 @@
+
+
+@media screen and (min-width: 768px) {
+
+
+    div.product-app-container {
+        
+        // main-container }
+
+        main.pf-main-container {
+            padding: $padding;
+
+            div.pf-sub-nav {
+                border-radius: 8px;
+            }
+        }
+        nav.pf-navigation {
+            display: grid;
+            grid-template-columns: 223px auto;
+            gap: 10px;
+            align-items: stretch;
+            background: none;
+            padding: $padding;
+            div.pf-navigation-title-container {
+                align-items: flex-end;
+                background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+                background-position: center;
+                border-radius: 8px;
+                background-size:cover;
+                height: auto;
+                padding-bottom: 3em;
+                button.pf-navigation-trigger {
+                    display: none;
+                }
+            }
+            div.pf-filter-container {
+                position: static;
+                height: auto;
+                width: auto;
+                div.pf-filter-roadmap-container {
+                    height: auto;
+                    gap: 10px;
+                    width: 100%;
+                    padding: 0;
+                    align-items:stretch;
+                    position: static;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    div.pf-filter {
+                        margin-bottom: 0;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

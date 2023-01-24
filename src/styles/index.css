@@ -373,4 +373,64 @@ div.product-app-container main.pf-main-container button.pf-custom-drop-down span
 div.product-app-container main.pf-main-container button.pf-custom-drop-down img {
   width: 12px;
 }
+
+@media screen and (min-width: 768px) {
+  div.product-app-container main.pf-main-container {
+    padding: 1.2em;
+  }
+  div.product-app-container main.pf-main-container div.pf-sub-nav {
+    border-radius: 8px;
+  }
+  div.product-app-container nav.pf-navigation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 223px auto;
+        grid-template-columns: 223px auto;
+    gap: 10px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    background: none;
+    padding: 1.2em;
+  }
+  div.product-app-container nav.pf-navigation div.pf-navigation-title-container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 3em;
+  }
+  div.product-app-container nav.pf-navigation div.pf-navigation-title-container button.pf-navigation-trigger {
+    display: none;
+  }
+  div.product-app-container nav.pf-navigation div.pf-filter-container {
+    position: static;
+    height: auto;
+    width: auto;
+  }
+  div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container {
+    height: auto;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    position: static;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  div.product-app-container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter {
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=index.css.map */
