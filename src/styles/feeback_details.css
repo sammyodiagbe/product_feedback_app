@@ -1,1 +1,99 @@
-/* No CSS *//*# sourceMappingURL=feeback_details.css.map */
+div.product-app-container main.pf-main-container div.pf-feedback-details {
+  background: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1.2em;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      grid-template-areas: "pf-details pf-details pf-details" "pf-upvote . pf-comment-count";
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: pf-details;
+  margin-bottom: 0.9em;
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container h2 {
+  font-size: 24px;
+  margin-bottom: calc($margin-bottom / 1.618);
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container p {
+  font-size: calc($font-size / 1.618);
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
+  font-weight: bold;
+  font-size: 1em;
+  vertical-align: center;
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button img, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments img {
+  margin-right: .5em;
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: pf-upvote;
+  font-size: 1em;
+}
+
+div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: pf-comment-count;
+  font-size: 1em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "user-image pf-name . reply-toggle" "content content content content";
+  grid-row-gap: 1rem;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment img.user-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: user-image;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pf-name;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-name h3 {
+  font-size: 18px;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment button.reply-toggle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: reply-toggle;
+  color: #4661e6;
+  font-size: .9em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment button.reply-toggle:hover {
+  text-decoration: underline;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p.content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: content;
+}
+/*# sourceMappingURL=feeback_details.css.map */

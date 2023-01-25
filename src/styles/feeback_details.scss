@@ -1,11 +1,49 @@
-
-
+@import "./variables";
+$font_size: 24px;
+$paragraph_font_size: calc($font-size / 1.618);
+$margin-bottom: .9em;
 div.product-app-container {
 
     main.pf-main-container {
 
         div.pf-feedback-details {
+            background: $white;
+            margin-bottom: 1rem;
+            padding: $padding;
+            display: grid;
+            align-items: flex-start;
+            grid-template-areas: 
+            "pf-details pf-details pf-details"
+            "pf-upvote . pf-comment-count";
+            div.pf-details-container {
+                grid-area: pf-details;
+                margin-bottom: $margin-bottom;
+                
+                h2 {
+                    font-size:$font_size;
+                    margin-bottom: calc($margin-bottom / 1.618);
+                }
+                p {
+                    font-size: $paragraph_font_size;
+                }
+            }
+            button.pf-upvote-button, span.pf-comments {
+                font-weight: bold;
+                font-size: 1em;
+                vertical-align: center;
+                img {
+                    margin-right: .5em;
+                }
+            }
 
+            button.pf-upvote-button {
+                grid-area: pf-upvote;
+                font-size: 1em;
+            }
+            span.pf-comments {
+                grid-area: pf-comment-count;
+                font-size: 1em;
+            }
         }
 
         div.pf-comment-container {
@@ -14,13 +52,34 @@ div.product-app-container {
 
 
                 div.pf-comment {
-                    img.user-image {}
-                    div.pf-name {
-
-
+                    display: grid;
+                    grid-template-areas: "user-image pf-name . reply-toggle"
+                    "content content content content"; 
+                    grid-row-gap: 1rem;
+                    img.user-image {
+                        grid-area: user-image;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50px;
+                        margin-right: 10px;
                     }
-                    button.reply-toggle{}
-                    p.content {}
+                    div.pf-name {
+                        grid-area: pf-name;
+                        h3{
+                            font-size: 18px;
+                        }
+                    }
+                    button.reply-toggle{
+                        grid-area: reply-toggle;
+                        color: $bluish_marlin;
+                        font-size:.9em;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    p.content {
+                        grid-area: content;
+                    }
                 }
             }
         }
