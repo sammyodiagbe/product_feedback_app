@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./styles/index.css";
 import "./styles/subnav.css";
 import "./styles/roadmap.css";
+import "./styles/feeback_details.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

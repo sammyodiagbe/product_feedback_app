@@ -3,7 +3,7 @@ import chevronLeft from "../assets/shared/icon-arrow-left.svg";
 
 const GoBack = ({ addFeedBackLink, data }) => {
   const location = useLocation();
-  const { prev_url } = location.state;
+  const { prev_url } = location.state || {};
   return (
     <div className="pf-go-back">
       <Link to={prev_url} className="pf-go-back-link">
