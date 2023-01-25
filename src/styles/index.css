@@ -281,7 +281,7 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
   word-spacing: .06em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion, div.product-app-container main.pf-main-container div.pf-feedback-details {
+div.product-app-container main.pf-main-container div.pf-suggestion {
   padding: 1.2em;
   display: -ms-grid;
   display: grid;
@@ -292,7 +292,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion, div.product-
   border-radius: 8px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -300,15 +300,15 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   margin-bottom: 0.9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container h2 {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2 {
   font-size: 20px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container span.pf-category {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container h2, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container p, div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
   margin-bottom: 0.9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category, div.product-app-container main.pf-main-container div.pf-feedback-details div.pf-details-container span.pf-category {
+div.product-app-container main.pf-main-container div.pf-suggestion div.pf-details-container span.pf-category {
   padding: 8px .8em;
   background: #f2f4ff;
   color: #4661e6;
@@ -318,7 +318,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion div.pf-detail
   font-size: .9em;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments, div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
   padding: 0.4em 1.2em;
   font-weight: bold;
   display: -webkit-box;
@@ -333,7 +333,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upv
   min-width: 50px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button, div.product-app-container main.pf-main-container div.pf-feedback-details button.pf-upvote-button {
+div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upvote-button {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pf-upvote;
@@ -342,7 +342,7 @@ div.product-app-container main.pf-main-container div.pf-suggestion button.pf-upv
   border-radius: 8px;
 }
 
-div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments, div.product-app-container main.pf-main-container div.pf-feedback-details span.pf-comments {
+div.product-app-container main.pf-main-container div.pf-suggestion span.pf-comments {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: pf-comments;
