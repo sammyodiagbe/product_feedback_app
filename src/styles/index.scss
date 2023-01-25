@@ -216,6 +216,7 @@ div.product-app-container {
             "pf-upvote .  pf-comments";
             row-gap: 1em;
             margin-bottom: $padding;
+            border-radius: 8px;
             div.pf-details-container {
                 grid-area: pf-details;
                 margin-bottom: $space_between_elem;
@@ -244,7 +245,7 @@ div.product-app-container {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-                min-width: 90px;
+                min-width: 50px;
                 
             }
 
