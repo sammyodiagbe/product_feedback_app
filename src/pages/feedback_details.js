@@ -24,20 +24,7 @@ const FeedBackDetails = () => {
 
   const commentStructure = comments ? (
     comments.map((comment, index) => {
-      const { id, user, content } = comment;
-      const { username, name, image } = user;
-      const url = "." + image;
-
-      return (
-        <Comment
-          username={username}
-          url={url}
-          id={id}
-          name={name}
-          content={content}
-          key={index}
-        />
-      );
+      return <Comment data={comment} key={index} />;
     })
   ) : (
     <h1>No comments for this feedback</h1>

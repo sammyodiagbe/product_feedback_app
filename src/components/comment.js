@@ -1,4 +1,7 @@
-const Comment = ({ url, username, id, name, content }) => {
+const Comment = ({ data }) => {
+  const { id, user, content, replies } = data;
+  const { username, name, image } = user;
+  const url = "." + image;
   return (
     <div className="pf-comment">
       {/* <div className="pf-comment-head"> */}

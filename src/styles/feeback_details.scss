@@ -58,6 +58,7 @@ div.product-app-container {
                     grid-template-areas: "user-image pf-name . reply-toggle"
                     "content content content content"; 
                     grid-row-gap: 1rem;
+                
                     img.user-image {
                         grid-area: user-image;
                         height: 50px;
