@@ -54,4 +54,18 @@ div.pf-main-container div.pf-form-container form div.pf-action-container button.
 div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-delete {
   background: #D73737;
 }
+
+@media screen and (min-width: 768px) {
+  div.product-app-container div.pf-main-container {
+    padding: 2em;
+  }
+  div.product-app-container div.pf-main-container div.pf-form-container {
+    width: 600px;
+    margin: 0 auto;
+  }
+  div.product-app-container div.pf-go-back {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
 /*# sourceMappingURL=feedback.css.map */
