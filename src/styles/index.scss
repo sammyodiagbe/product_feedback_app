@@ -4,304 +4,307 @@
 $space_between_elem: .9em;
 
 div.product-app-container {
-    a.pf-add-feedback {
-        @include add-feedback-button($bluish_marlin);
-    }
-
-
-    div.pf-go-back {
-        padding: $padding;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        a.pf-go-back-link {
-            font-weight: bold;
-        }
-    }
-    // nmobile-navigation
-     nav.pf-navigation {
-        background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
-        background-size: cover;
-        position: sticky;
-            top: 0;
-            z-index: 100;
+    div.container {
         
-        div.pf-navigation-title-container {
-            height: 90px;
+        a.pf-add-feedback {
+            @include add-feedback-button($bluish_marlin);
+        }
+    
+    
+        div.pf-go-back {
+            padding: $padding;
             display: flex;
             align-items: center;
-            padding:0 $padding;
             justify-content: space-between;
-            color: #fff;
+            a.pf-go-back-link {
+                font-weight: bold;
+            }
+        }
+        // nmobile-navigation
+         nav.pf-navigation {
+            background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+            background-size: cover;
+            position: sticky;
+                top: 0;
+                z-index: 100;
             
-        }   
-        div.pf-filter-container {
-            width: 100vw;
-            position: fixed;
-            background: rgba(0,0,0,.7);
-            
-            top: 90px;
-            left: 100vw;
-                transition: .2s ease-out;
-                &.open {
-                    transition: .2s ease-in;
-                    left: 0;
-                    
-                }
-            div.pf-filter-roadmap-container {
-                background: $white;
-                position: relative;
-                width: calc(100% * 0.8);
-                height: calc(100vh - 80px);
-                left: 20%;
+            div.pf-navigation-title-container {
+                height: 90px;
                 display: flex;
-                flex-direction: column;
-                padding: 2em;
                 align-items: center;
-                background: $neutral_gray;
-                div.pf-filter,div.pf-roadmap {
-                    padding: $padding;
-                    background: #fff;
-                    width: 100%;
-                    border-radius: .8em;
-                }
-    
-                div.pf-filter{
+                padding:0 $padding;
+                justify-content: space-between;
+                color: #fff;
+                
+            }   
+            div.pf-filter-container {
+                width: 100vw;
+                position: fixed;
+                background: rgba(0,0,0,.7);
+                
+                top: 90px;
+                left: 100vw;
+                    transition: .2s ease-out;
+                    &.open {
+                        transition: .2s ease-in;
+                        left: 0;
+                        
+                    }
+                div.pf-filter-roadmap-container {
+                    background: $white;
+                    position: relative;
+                    width: calc(100% * 0.8);
+                    height: calc(100vh - 80px);
+                    left: 20%;
                     display: flex;
-                    flex-wrap: wrap;
-                    margin-bottom: $padding;
-                    a {
-                        display: inline-block;
-                        padding:.5em $padding;
-    
-                        margin-right: .7em;
-                        margin-bottom: .5em;
-                        background: $neutral_gray;
-                        color: $bluish_marlin;
-                        border-radius: $border_radius_link;
-                        font-weight: bold;
-                        font-size: .9em;
-                        &.active {
-                            background: $bluish_marlin;
-                            color: $white;
-                        }
-                    }
-                }
-                div.pf-roadmap {
-                    // display: flex;
-                    div.pf-roadmap-head {
-                        display: flex;
-                        justify-content: space-between;
-                        padding-bottom: $padding;
-                        align-items: center;
+                    flex-direction: column;
+                    padding: 2em;
+                    align-items: center;
+                    background: $neutral_gray;
+                    div.pf-filter,div.pf-roadmap {
+                        padding: $padding;
+                        background: #fff;
                         width: 100%;
+                        border-radius: .8em;
+                    }
+        
+                    div.pf-filter{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-bottom: $padding;
                         a {
+                            display: inline-block;
+                            padding:.5em $padding;
+        
+                            margin-right: .7em;
+                            margin-bottom: .5em;
+                            background: $neutral_gray;
                             color: $bluish_marlin;
-                            text-decoration: underline;
-                            font-size: .8em;
+                            border-radius: $border_radius_link;
+                            font-weight: bold;
+                            font-size: .9em;
+                            &.active {
+                                background: $bluish_marlin;
+                                color: $white;
+                            }
                         }
                     }
-    
-                    div.pf-roadmap-types {
-                        div.pf-roadmap-type {
+                    div.pf-roadmap {
+                        // display: flex;
+                        div.pf-roadmap-head {
                             display: flex;
-                            align-items: center;
-                            padding-bottom: $padding;
                             justify-content: space-between;
-                            div.pf-type-left {
-                                display: flex;
-                                align-items: center;
-                                span {
-                                    height: 8px;
-                                    width: 8px;
-                                    display: inline-block;
-                                    border-radius: 8px;
-                                    margin-right: .4em;
-                                    &.orange {
-                                        background-color: #F49F85;
-                                    }
-                                    &.purple {
-                                        background-color: #AD1FEA;
-                                    }
-                                    &.blue {
-                                        background-color: #62BCFA;
-                                    }
-                                }
-                            }
-                            b {
-                                display: block;
-                                align-self: flex-end;
+                            padding-bottom: $padding;
+                            align-items: center;
+                            width: 100%;
+                            a {
+                                color: $bluish_marlin;
+                                text-decoration: underline;
                                 font-size: .8em;
                             }
                         }
+        
+                        div.pf-roadmap-types {
+                            div.pf-roadmap-type {
+                                display: flex;
+                                align-items: center;
+                                padding-bottom: $padding;
+                                justify-content: space-between;
+                                div.pf-type-left {
+                                    display: flex;
+                                    align-items: center;
+                                    span {
+                                        height: 8px;
+                                        width: 8px;
+                                        display: inline-block;
+                                        border-radius: 8px;
+                                        margin-right: .4em;
+                                        &.orange {
+                                            background-color: #F49F85;
+                                        }
+                                        &.purple {
+                                            background-color: #AD1FEA;
+                                        }
+                                        &.blue {
+                                            background-color: #62BCFA;
+                                        }
+                                    }
+                                }
+                                b {
+                                    display: block;
+                                    align-self: flex-end;
+                                    font-size: .8em;
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-
-     }
-
-     main.pf-main-container {
-
-
-        
-        &.pf-move-in {
-            padding: $padding;
-        }
-        div.pf-vertical-list {
-            padding: 2em $padding;
-            background: $neutral_gray;
-
-            div.pf-no-feedback {
-                background-color: $white;
-                padding: 2em;
-                text-align: center;
-
-                h1 {
-                    font-size: 18px;
-                }
-                p {
-                    font-size: 13px;
-                }
-
-                img, h1, p  {
-                    margin-bottom: $padding;
-                }
-                a {
-                    @include add-feedback-button($call_to_action_purple);
-                }
+    
+         }
+    
+         main.pf-main-container {
+    
+    
+            
+            &.pf-move-in {
+                padding: $padding;
             }
-        }
-
-        div.pf-comment-container {
-            div.pf-total-comments {
-                padding:$padding;
-                background:$white;
-                h1{
-                    font-size: 24px;
-                }
-            }
-
-            // div.pf-comments {
-            //     div.pf-comment {
-            //         padding:$padding;
-            //         background:$white;
-            //         margin-bottom: $space_between_elem;
-
-            //         div.pf-comment-head {
-            //             display: grid;
-            //             grid-template-columns: max-content auto max-content;
-            //             padding-bottom:.8em;
-
-            //             img {
-            //                 width:50px;
-            //                 height: 50px;
-            //                 border-radius: 50px;
-            //                 margin-right:$space_between_elem;
-            //             }
-            //         }
-
-            //          p{
-            //             text-align: justify;
-            //             word-spacing: .06em;
-            //          }
-            //     }
-            // }
-        }
-        div.pf-suggestion {
-            padding: $padding;
-            display: grid;
-            background: $white;
-            grid-template-areas: "pf-details pf-details pf-details"
-            "pf-upvote .  pf-comments";
-            row-gap: 1em;
-            margin-bottom: $padding;
-            border-radius: 8px;
-            div.pf-details-container {
-                grid-area: pf-details;
-                margin-bottom: $space_between_elem;
-                h2 {
-                    font-size: 20px;
-                }
-                h2,p,span.pf-category {
-                    margin-bottom: $space_between_elem;
-                }
-
-                span.pf-category {
-                    padding:8px .8em;
-                    background: $neutral_gray;
-                    color: $bluish_marlin;
-                    text-transform: capitalize;
-                    font-weight: bold;
-                    border-radius: $border_radius_link;
-                    font-size: .9em;
-                }
-
-            }
-
-            button.pf-upvote-button, span.pf-comments {
-                padding: .4em $padding;
-                font-weight: bold;
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                min-width: 50px;
-                
-            }
-
-            button.pf-upvote-button {
-                grid-area: pf-upvote;
-                padding: .7em $padding;
+            div.pf-vertical-list {
+                padding: 2em $padding;
                 background: $neutral_gray;
-                border-radius: $border_radius_link;
-            }
-
-            span.pf-comments {
-                grid-area: pf-comments;
-            }
-        }
-
-        div.pf-sub-nav {
-
-            button.pf-custom-drop-down {
-                color: $white;
-                display: flex;
-                align-items: center;
     
-                div.pf-total-suggesstions {
-                    display: none;   
-                    vertical-align: middle;
-                   
-                    margin-right: 10px;
-                    img {
-                        margin-right: 8px;
-                        width: 15px;
+                div.pf-no-feedback {
+                    background-color: $white;
+                    padding: 2em;
+                    text-align: center;
+    
+                    h1 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 13px;
                     }
     
-                    b {
-                        font-size: 16px;
+                    img, h1, p  {
+                        margin-bottom: $padding;
+                    }
+                    a {
+                        @include add-feedback-button($call_to_action_purple);
                     }
                 }
-                span {
-                    color: $neutral_gray;
+            }
     
-                    &.a {
-    
-                        margin-right: .3em;
+            div.pf-comment-container {
+                div.pf-total-comments {
+                    padding:$padding;
+                    background:$white;
+                    h1{
+                        font-size: 24px;
                     }
-                    &.pf-value {
-                        margin-right: .5em;
+                }
+    
+                // div.pf-comments {
+                //     div.pf-comment {
+                //         padding:$padding;
+                //         background:$white;
+                //         margin-bottom: $space_between_elem;
+    
+                //         div.pf-comment-head {
+                //             display: grid;
+                //             grid-template-columns: max-content auto max-content;
+                //             padding-bottom:.8em;
+    
+                //             img {
+                //                 width:50px;
+                //                 height: 50px;
+                //                 border-radius: 50px;
+                //                 margin-right:$space_between_elem;
+                //             }
+                //         }
+    
+                //          p{
+                //             text-align: justify;
+                //             word-spacing: .06em;
+                //          }
+                //     }
+                // }
+            }
+            div.pf-suggestion {
+                padding: $padding;
+                display: grid;
+                background: $white;
+                grid-template-areas: "pf-details pf-details pf-details"
+                "pf-upvote .  pf-comments";
+                row-gap: 1em;
+                margin-bottom: $padding;
+                border-radius: 8px;
+                div.pf-details-container {
+                    grid-area: pf-details;
+                    margin-bottom: $space_between_elem;
+                    h2 {
+                        font-size: 20px;
+                    }
+                    h2,p,span.pf-category {
+                        margin-bottom: $space_between_elem;
+                    }
+    
+                    span.pf-category {
+                        padding:8px .8em;
+                        background: $neutral_gray;
+                        color: $bluish_marlin;
+                        text-transform: capitalize;
                         font-weight: bold;
+                        border-radius: $border_radius_link;
+                        font-size: .9em;
                     }
-                }
-                img {
-                    width: 12px;
+    
                 }
     
+                button.pf-upvote-button, span.pf-comments {
+                    padding: .4em $padding;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    min-width: 50px;
+                    
+                }
+    
+                button.pf-upvote-button {
+                    grid-area: pf-upvote;
+                    padding: .7em $padding;
+                    background: $neutral_gray;
+                    border-radius: $border_radius_link;
+                }
+    
+                span.pf-comments {
+                    grid-area: pf-comments;
+                }
             }
-        }
+    
+            div.pf-sub-nav {
+    
+                button.pf-custom-drop-down {
+                    color: $white;
+                    display: flex;
+                    align-items: center;
         
-     }
+                    div.pf-total-suggesstions {
+                        display: none;   
+                        vertical-align: middle;
+                       
+                        margin-right: 10px;
+                        img {
+                            margin-right: 8px;
+                            width: 15px;
+                        }
+        
+                        b {
+                            font-size: 16px;
+                        }
+                    }
+                    span {
+                        color: $neutral_gray;
+        
+                        &.a {
+        
+                            margin-right: .3em;
+                        }
+                        &.pf-value {
+                            margin-right: .5em;
+                            font-weight: bold;
+                        }
+                    }
+                    img {
+                        width: 12px;
+                    }
+        
+                }
+            }
+            
+         }
+    }
 }
 
 @import "./media\ queries/index";

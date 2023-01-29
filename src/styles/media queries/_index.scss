@@ -1,82 +1,122 @@
 
-
-@media screen and (min-width: 768px) {
+@import "./screensize";
+@media screen and (min-width: $tablets) {
 
 
     div.product-app-container {
         
         // main-container }
         
-        main.pf-main-container {
-            padding: $padding;
+        div.container {
             
-            div.pf-sub-nav {
-                border-radius: 8px;
-                    button.pf-custom-drop-down {
+            main.pf-main-container {
+                padding: $padding;
+                
+                div.pf-sub-nav {
                     border-radius: 8px;
-                    div.pf-total-suggesstions {
-                        display: block ;
-                        align-items: center;
-                        margin-right: 10px;
-                        
+                        button.pf-custom-drop-down {
+                        border-radius: 8px;
+                        div.pf-total-suggesstions {
+                            display: block ;
+                            align-items: center;
+                            margin-right: 10px;
+                            
+                        }
+                    }
+                }
+                
+                
+                div.pf-vertical-list {
+                    padding: $padding 0;
+    
+                    div.pf-suggestion {
+                        grid-template-areas: "pf-upvote pf-details pf-comments";
+                        grid-template-columns:min-content auto min-content;
+                        grid-gap: 24px;
+    
+                        button.pf-upvote-button {
+                            align-self: flex-start;
+                            flex-direction: column;
+                            padding: $padding 5px;
+                            min-width: 50px;
+                        }
                     }
                 }
             }
-            
-            
-            div.pf-vertical-list {
-                padding: $padding 0;
 
-                div.pf-suggestion {
-                    grid-template-areas: "pf-upvote pf-details pf-comments";
-                    grid-template-columns:min-content auto min-content;
-                    grid-gap: 24px;
-
-                    button.pf-upvote-button {
-                        align-self: flex-start;
-                        flex-direction: column;
-                        padding: $padding 5px;
-                        min-width: 50px;
+            nav.pf-navigation {
+                display: grid;
+                grid-template-columns: 223px auto;
+                gap: 10px;
+                align-items: stretch;
+                background: none;
+                padding: $padding;
+                div.pf-navigation-title-container {
+                    align-items: flex-end;
+                    background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
+                    background-position: bottom;
+                    border-radius: 8px;
+                    background-size:cover;
+                    height: auto;
+                    padding-bottom: 3em;
+                    button.pf-navigation-trigger {
+                        display: none;
+                    }
+                }
+                div.pf-filter-container {
+                    position: static;
+                    height: auto;
+                    width: auto;
+                    div.pf-filter-roadmap-container {
+                        height: auto;
+                        gap: 10px;
+                        width: 100%;
+                        padding: 0;
+                        align-items:stretch;
+                        position: static;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+    
+                        div.pf-filter {
+                            margin-bottom: 0;
+                            align-items: center;
+                        }
                     }
                 }
             }
         }
-        nav.pf-navigation {
-            display: grid;
-            grid-template-columns: 223px auto;
-            gap: 10px;
-            align-items: stretch;
-            background: none;
-            padding: $padding;
-            div.pf-navigation-title-container {
-                align-items: flex-end;
-                background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
-                background-position: bottom;
-                border-radius: 8px;
-                background-size:cover;
-                height: auto;
-                padding-bottom: 3em;
-                button.pf-navigation-trigger {
-                    display: none;
-                }
-            }
-            div.pf-filter-container {
-                position: static;
-                height: auto;
-                width: auto;
-                div.pf-filter-roadmap-container {
-                    height: auto;
-                    gap: 10px;
-                    width: 100%;
-                    padding: 0;
-                    align-items:stretch;
-                    position: static;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-                    div.pf-filter {
-                        margin-bottom: 0;
-                        align-items: center;
+@media screen and (min-width: $desktop) {
+
+    div.product-app-container {
+        div.container {
+            width: $desktop_screen_width;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-gap: 8px;
+            nav.pf-navigation {
+                grid-template-columns: 1fr;
+                position: sticky;
+                top: 0;
+                left: 0;
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+                div.pf-navigation-title-container {
+                    height: 200px;
+                    margin-bottom: 1em;
+                }
+                div.pf-filter-container {
+                    position: static !important;
+                    height: auto;
+                    width: auto;
+                    background: transparent;
+                    div.pf-filter-roadmap-container {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: min-content auto;
                     }
                 }
             }
