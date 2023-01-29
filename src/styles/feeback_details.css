@@ -121,7 +121,8 @@ div.product-app-container main.pf-main-container div.pf-comment-box form label {
   font-weight: bold;
   font-size: 18px;
   color: black;
-  margin-bottom: .9em;
+  margin-bottom: .8em;
+  display: inline-block;
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-box form textarea {
@@ -153,5 +154,6 @@ div.product-app-container main.pf-main-container div.pf-comment-box form div.tot
   color: #ffffff;
   border-radius: 8px;
   color: #ffffff;
+  font-weight: bold;
 }
 /*# sourceMappingURL=feeback_details.css.map */

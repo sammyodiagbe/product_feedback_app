@@ -106,7 +106,8 @@ div.product-app-container {
                     font-weight: bold;
                     font-size: 18px;
                     color: black;
-                    margin-bottom: .9em;
+                    margin-bottom: .8em;
+                    display: inline-block;
                 }
                 textarea {
                     background: $neutral_gray;
@@ -128,6 +129,7 @@ div.product-app-container {
                         color: $white;
                         border-radius: $border_radius_link;
                         color: $white;
+                        font-weight: bold;
                     }
                 }
         
