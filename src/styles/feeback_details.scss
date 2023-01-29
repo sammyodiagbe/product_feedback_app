@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./media\ queries/feedback";
 $font_size: 24px;
 $paragraph_font_size: calc($font-size / 1.618);
 $margin-bottom: .9em;
@@ -137,3 +138,5 @@ div.product-app-container {
         }
     }
 }
+
+@import "./media\ queries/feedback";

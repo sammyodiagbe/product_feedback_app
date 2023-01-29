@@ -68,4 +68,12 @@ div.pf-main-container div.pf-form-container form div.pf-action-container button.
     margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  div.product-app-container div.container {
+    width: 730px;
+    margin: 0 auto;
+    display: block;
+  }
+}
 /*# sourceMappingURL=feedback.css.map */

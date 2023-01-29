@@ -1,7 +1,29 @@
+@media screen and (min-width: 768px) {
+  div.product-app-container div.pf-main-container {
+    padding: 2em;
+  }
+  div.product-app-container div.pf-main-container div.pf-form-container {
+    width: 600px;
+    margin: 0 auto;
+  }
+  div.product-app-container div.pf-go-back {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  div.product-app-container div.container {
+    width: 730px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 div.product-app-container main.pf-main-container div.pf-feedback-details {
   background: #ffffff;
   margin-bottom: 1rem;
-  padding: 1.2em;
+  padding: 2em;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: start;
@@ -52,7 +74,7 @@ div.product-app-container main.pf-main-container div.pf-feedback-details span.pf
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments {
-  padding: 1.2em;
+  padding: 2em;
   background: #fff;
 }
 
@@ -65,7 +87,7 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
   display: grid;
       grid-template-areas: "user-image pf-name . reply-toggle" ". content content content";
   grid-row-gap: 1rem;
-  padding: 1.2em 0;
+  padding: 2em 0;
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment img.user-image {
@@ -114,7 +136,7 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
 div.product-app-container main.pf-main-container div.pf-comment-box {
   background: #fff;
   margin: 1em 0;
-  padding: 1.2em;
+  padding: 2em;
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-box form label {
@@ -127,7 +149,7 @@ div.product-app-container main.pf-main-container div.pf-comment-box form label {
 
 div.product-app-container main.pf-main-container div.pf-comment-box form textarea {
   background: #f2f4ff;
-  padding: 1.2em;
+  padding: 2em;
   padding-left: .6em;
   width: 100%;
   border-radius: 8px;
@@ -145,15 +167,37 @@ div.product-app-container main.pf-main-container div.pf-comment-box form div.tot
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.2em 0;
+  padding: 2em 0;
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-box form div.total-value button.post-comment {
   background: #C75AF6;
-  padding: 0.9em 1.2em;
+  padding: 0.9em 2em;
   color: #ffffff;
   border-radius: 8px;
   color: #ffffff;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  div.product-app-container div.pf-main-container {
+    padding: 2em;
+  }
+  div.product-app-container div.pf-main-container div.pf-form-container {
+    width: 600px;
+    margin: 0 auto;
+  }
+  div.product-app-container div.pf-go-back {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  div.product-app-container div.container {
+    width: 730px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 /*# sourceMappingURL=feeback_details.css.map */
