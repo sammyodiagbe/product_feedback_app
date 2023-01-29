@@ -1,0 +1,34 @@
+@import "./screensize";
+
+@media screen and (min-width: $tablets) {
+
+
+    div.product-app-container {
+        padding: $padding;
+
+        div.pf-sub-nav {
+            border-radius: 9px;
+        }
+
+        div.pf-roadmap-nav {
+            border-radius: 9px;
+            div.pf-nav-top {
+
+            }
+        }
+
+        div.pf-content {
+            width: 100%;
+            position: static;
+           grid-gap: 10px;
+            &.planned, &.In-Progress,&.live {
+                left:0;
+
+            }
+
+            div.pf-r-container {
+                padding:$padding 0;
+            }
+        }
+    }
+}
