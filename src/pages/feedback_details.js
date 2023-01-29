@@ -8,8 +8,9 @@ import Comment from "../components/comment";
 
 const FeedBackDetails = () => {
   const { id } = useParams();
-  console.log(id);
   const [feedback, setFeedback] = useState({});
+  const [userComment, setUserComment] = useState("");
+  const [totalCharacterLeft, setTotalCharacterLeft] = useState(250);
   const context = useContext(dataContext);
 
   useEffect(() => {
@@ -53,6 +54,32 @@ const FeedBackDetails = () => {
             <h1>{comments ? comments.length : "No"} Comments</h1>
           </div>
           <div className="pf-comments">{commentStructure}</div>
+        </div>
+
+        <div className="pf-comment-box">
+          <form>
+            <label htmlFor="add-comment">Add Comment</label>
+            <textarea
+              maxLength={250}
+              name="add-comment"
+              id="add-comment"
+              value={userComment}
+              onChange={(event) => {
+                const {
+                  target: { value },
+                } = event;
+                const maxLength = 250;
+
+                setUserComment(value);
+                setTotalCharacterLeft(maxLength - value.length);
+              }}
+              placeholder="Add your comment"
+            ></textarea>
+            <div className="total-value">
+              <p>{totalCharacterLeft} characters left</p>
+              <button className="post-comment">Post Comment</button>
+            </div>
+          </form>
         </div>
       </main>
     </>

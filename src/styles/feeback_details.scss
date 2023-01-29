@@ -96,5 +96,42 @@ div.product-app-container {
                 }
             }
         }
+
+        div.pf-comment-box {
+            background: #fff;
+            margin: 1em 0;
+            padding: $padding;
+            form {
+                label {
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: black;
+                    margin-bottom: .9em;
+                }
+                textarea {
+                    background: $neutral_gray;
+                    padding: $padding;
+                    padding-left: .6em;
+                    width: 100%;
+                    border-radius: $border_radius_link;
+                    font-size: 1em;
+                    resize: none;
+                }
+                div.total-value {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: $padding 0;
+                    button.post-comment {
+                        background: $call_to_action_purple;
+                        padding:.9em $padding;
+                        color: $white;
+                        border-radius: $border_radius_link;
+                        color: $white;
+                    }
+                }
+        
+            }
+        }
     }
 }

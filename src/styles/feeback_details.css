@@ -110,4 +110,48 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p.content b.replying-to {
   color: #AD1FEA;
 }
+
+div.product-app-container main.pf-main-container div.pf-comment-box {
+  background: #fff;
+  margin: 1em 0;
+  padding: 1.2em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-box form label {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  margin-bottom: .9em;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-box form textarea {
+  background: #f2f4ff;
+  padding: 1.2em;
+  padding-left: .6em;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: none;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-box form div.total-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2em 0;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-box form div.total-value button.post-comment {
+  background: #C75AF6;
+  padding: 0.9em 1.2em;
+  color: #ffffff;
+  border-radius: 8px;
+  color: #ffffff;
+}
 /*# sourceMappingURL=feeback_details.css.map */
