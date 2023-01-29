@@ -254,33 +254,6 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
   font-size: 24px;
 }
 
-div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment {
-  padding: 1.2em;
-  background: #ffffff;
-  margin-bottom: 0.9em;
-}
-
-div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-comment-head {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: max-content auto max-content;
-      grid-template-columns: -webkit-max-content auto -webkit-max-content;
-      grid-template-columns: max-content auto max-content;
-  padding-bottom: .8em;
-}
-
-div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment div.pf-comment-head img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-right: 0.9em;
-}
-
-div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p {
-  text-align: justify;
-  word-spacing: .06em;
-}
-
 div.product-app-container main.pf-main-container div.pf-suggestion {
   padding: 1.2em;
   display: -ms-grid;

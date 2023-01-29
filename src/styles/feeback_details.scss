@@ -49,16 +49,23 @@ div.product-app-container {
         div.pf-comment-container {
             div.pf-total-comments {
                 // 
+                
             }
             div.pf-comments {
- 
+                
+                padding: $padding;
+                background: #fff;
+                div.pf-replies {
+                    padding-left:  30px;
+                }
 
                 div.pf-comment {
                     display: grid;
                     grid-template-areas: "user-image pf-name . reply-toggle"
-                    "content content content content"; 
+                    ". content content content"; 
                     grid-row-gap: 1rem;
-                
+                    padding: $padding 0;
+                    
                     img.user-image {
                         grid-area: user-image;
                         height: 50px;
@@ -82,6 +89,9 @@ div.product-app-container {
                     }
                     p.content {
                         grid-area: content;
+                        b.replying-to {
+                            color: #AD1FEA;
+                        }
                     }
                 }
             }

@@ -1,5 +1,5 @@
 const Comment = ({ data }) => {
-  const { id, user, content, replies } = data;
+  const { id, user, content, replies, replyingTo } = data;
 
   const { username, name, image } = user;
   const url = "." + image;
@@ -21,7 +21,10 @@ const Comment = ({ data }) => {
           <p>@{username}</p>
         </div>
         <button className="reply-toggle">reply</button>
-        <p className="content">{content}</p>
+        <p className="content">
+          {replyingTo && <b className="replying-to">@{replyingTo} </b>}
+          {content}
+        </p>
       </div>
       <div className="pf-replies">
         {repliesStructure && (

@@ -51,11 +51,21 @@ div.product-app-container main.pf-main-container div.pf-feedback-details span.pf
   font-size: 1em;
 }
 
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments {
+  padding: 1.2em;
+  background: #fff;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-replies {
+  padding-left: 30px;
+}
+
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "user-image pf-name . reply-toggle" "content content content content";
+      grid-template-areas: "user-image pf-name . reply-toggle" ". content content content";
   grid-row-gap: 1rem;
+  padding: 1.2em 0;
 }
 
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment img.user-image {
@@ -92,8 +102,12 @@ div.product-app-container main.pf-main-container div.pf-comment-container div.pf
 
 div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p.content {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: content;
+}
+
+div.product-app-container main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment p.content b.replying-to {
+  color: #AD1FEA;
 }
 /*# sourceMappingURL=feeback_details.css.map */

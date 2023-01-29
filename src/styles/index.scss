@@ -182,31 +182,31 @@ div.product-app-container {
                 }
             }
 
-            div.pf-comments {
-                div.pf-comment {
-                    padding:$padding;
-                    background:$white;
-                    margin-bottom: $space_between_elem;
+            // div.pf-comments {
+            //     div.pf-comment {
+            //         padding:$padding;
+            //         background:$white;
+            //         margin-bottom: $space_between_elem;
 
-                    div.pf-comment-head {
-                        display: grid;
-                        grid-template-columns: max-content auto max-content;
-                        padding-bottom:.8em;
+            //         div.pf-comment-head {
+            //             display: grid;
+            //             grid-template-columns: max-content auto max-content;
+            //             padding-bottom:.8em;
 
-                        img {
-                            width:50px;
-                            height: 50px;
-                            border-radius: 50px;
-                            margin-right:$space_between_elem;
-                        }
-                    }
+            //             img {
+            //                 width:50px;
+            //                 height: 50px;
+            //                 border-radius: 50px;
+            //                 margin-right:$space_between_elem;
+            //             }
+            //         }
 
-                     p{
-                        text-align: justify;
-                        word-spacing: .06em;
-                     }
-                }
-            }
+            //          p{
+            //             text-align: justify;
+            //             word-spacing: .06em;
+            //          }
+            //     }
+            // }
         }
         div.pf-suggestion {
             padding: $padding;
