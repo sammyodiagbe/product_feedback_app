@@ -1,11 +1,19 @@
 import GoBack from "../components/goBack";
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import editIconButton from "../assets/shared/icon-edit-feedback.svg";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { dataContext } from "../context/dataContext";
 
 const EditFeedback = () => {
-  const location = useLocation();
-  const { feedback } = location.state;
+  const { id } = useParams();
+  const context = useContext(dataContext);
+  const [feedback, setFeedback] = useState({});
+  useEffect(() => {
+    const feedback = context.getFeedback(id);
+    setFeedback(feedback);
+    // setFeedback(context.getFeedback(id));
+    // console.log(feedback);
+  }, []);
 
   const { title, category: oldCategory, description } = feedback;
   const [category, setCategory] = useState(oldCategory);
