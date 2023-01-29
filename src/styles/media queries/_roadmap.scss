@@ -1,75 +1,73 @@
 @import "./screensize";
 
 @media screen and (min-width: $tablets) {
+  div.product-app-container {
+    padding: $padding;
 
-
-    div.product-app-container {
-        padding: $padding;
-
-        div.container {
-
-            div.pf-sub-nav {
-                border-radius: 9px;
-            }
-    
-            div.pf-roadmap-nav {
-                border-radius: 9px;
-                div.pf-nav-top {
-    
-                }
-            }
-    
-            div.pf-content {
-                width: 100%;
-                position: static;
-               grid-gap: 10px;
-                &.planned, &.In-Progress,&.live {
-                    left:0;
-    
-                }
-    
-                div.pf-r-container {
-                    padding:$padding 0;
-                }
-            }
+    div.container {
+      div.roadmap-container {
+        div.pf-sub-nav {
+          border-radius: 9px;
         }
 
+        div.pf-roadmap-nav {
+          border-radius: 9px;
+          div.pf-nav-top {
+          }
+        }
+
+        div.pf-content {
+          width: 100%;
+          position: static;
+          grid-gap: 10px;
+          &.planned,
+          &.In-Progress,
+          &.live {
+            left: 0;
+          }
+
+          div.pf-r-container {
+            padding: $padding 0;
+          }
+        }
+      }
     }
+  }
 }
 
-
 @media screen and (min-width: $desktop) {
-
-
-    div.product-app-container {
-        padding: $padding;
-        div.container {
-            width: 1100px !important;
-            margin: 0 auto;
-            div.pf-sub-nav {
-                border-radius: 9px;
-            }
-    
-            div.pf-roadmap-nav {
-                border-radius: 9px;
-                div.pf-nav-top {
-    
-                }
-            }
-    
-            div.pf-content {
-                width: 100%;
-                position: static;
-               grid-gap: 10px;
-                &.planned, &.In-Progress,&.live {
-                    left:0;
-    
-                }
-    
-                div.pf-r-container {
-                    padding:$padding 0;
-                }
-            }
+  div.product-app-container {
+    padding: $padding;
+    div.container {
+      display: block;
+      div.roadmap-container {
+        width: 1100px;
+        margin: 0 auto;
+        div.pf-sub-nav {
+          border-radius: 9px;
         }
+
+        div.pf-roadmap-nav {
+          border-radius: 9px;
+          div.pf-nav-top {
+          }
+        }
+
+        div.pf-content {
+          width: 100%;
+          position: static;
+          grid-gap: 10px;
+          &.planned,
+          &.In-Progress,
+          &.live {
+            left: 0;
+          }
+
+          div.pf-r-container {
+            padding: $padding 0;
+          }
+        }
+      }
     }
+  }
 }

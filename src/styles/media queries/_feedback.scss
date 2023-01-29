@@ -4,28 +4,42 @@ $padding: 2em;
 @media screen and (min-width: $tablets) {
 
     div.product-app-container {
+        div.container {
+            div.pf-main-container {
+                padding:$padding;
 
-        div.pf-main-container {
-            padding:$padding;
+                div.pf-comment-container {
+                    width: 700px;
+                }
+        
+                div.pf-form-container {
+                    width: 600px;
+                    margin: 0 auto;
+                    
+                }
+            }
     
-            div.pf-form-container {
+            div.pf-go-back {
                 width: 600px;
                 margin: 0 auto;
             }
         }
-
-        div.pf-go-back {
-            width: 600px;
-            margin: 0 auto;
-        }
+        
     }
 }
 
 @media screen and (min-width: $desktop) {
     div.product-app-container {
         div.container {
-            width: 730px;
-            margin: 0 auto;
+            div.feedback-container-content {
+                width: 730px;
+                margin: 0 auto;
+            }
+            // main.pf-main-container {
+            //     div.pf-comment-container{
+                    
+            //     }
+            // }
             display: block;
         }
     }

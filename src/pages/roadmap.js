@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import RoadmapContainer from "../components/roadmapContainer";
 import SubNav from "../components/subnav";
 import { dataContext } from "../context/dataContext";
+import "../styles/roadmap.css";
 
 const RoadMap = () => {
   const context = useContext(dataContext);
@@ -44,7 +45,7 @@ const RoadMap = () => {
       : renderLive.length;
 
   return (
-    <>
+    <div className="roadmap-container">
       <SubNav hideDrop={true} showBackLink={true} />
       {/* road map tracker */}
       <div className="pf-roadmap-nav">
@@ -83,7 +84,7 @@ const RoadMap = () => {
         <div className="pf-r-container">{renderInProgress}</div>
         <div className="pf-r-container">{renderLive}</div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,12 +1,15 @@
 @media screen and (min-width: 768px) {
-  div.product-app-container div.pf-main-container {
+  div.product-app-container div.container div.pf-main-container {
     padding: 2em;
   }
-  div.product-app-container div.pf-main-container div.pf-form-container {
+  div.product-app-container div.container div.pf-main-container div.pf-comment-container {
+    width: 700px;
+  }
+  div.product-app-container div.container div.pf-main-container div.pf-form-container {
     width: 600px;
     margin: 0 auto;
   }
-  div.product-app-container div.pf-go-back {
+  div.product-app-container div.container div.pf-go-back {
     width: 600px;
     margin: 0 auto;
   }
@@ -14,9 +17,11 @@
 
 @media screen and (min-width: 1440px) {
   div.product-app-container div.container {
+    display: block;
+  }
+  div.product-app-container div.container div.feedback-container-content {
     width: 730px;
     margin: 0 auto;
-    display: block;
   }
 }
 
@@ -180,14 +185,17 @@ div.product-app-container main.pf-main-container div.pf-comment-box form div.tot
 }
 
 @media screen and (min-width: 768px) {
-  div.product-app-container div.pf-main-container {
+  div.product-app-container div.container div.pf-main-container {
     padding: 2em;
   }
-  div.product-app-container div.pf-main-container div.pf-form-container {
+  div.product-app-container div.container div.pf-main-container div.pf-comment-container {
+    width: 700px;
+  }
+  div.product-app-container div.container div.pf-main-container div.pf-form-container {
     width: 600px;
     margin: 0 auto;
   }
-  div.product-app-container div.pf-go-back {
+  div.product-app-container div.container div.pf-go-back {
     width: 600px;
     margin: 0 auto;
   }
@@ -195,9 +203,11 @@ div.product-app-container main.pf-main-container div.pf-comment-box form div.tot
 
 @media screen and (min-width: 1440px) {
   div.product-app-container div.container {
+    display: block;
+  }
+  div.product-app-container div.container div.feedback-container-content {
     width: 730px;
     margin: 0 auto;
-    display: block;
   }
 }
 /*# sourceMappingURL=feeback_details.css.map */

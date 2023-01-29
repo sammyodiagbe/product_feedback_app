@@ -31,7 +31,7 @@ const FeedBackDetails = () => {
     <h1>No comments for this feedback</h1>
   );
   return (
-    <>
+    <div className="feedback-container-content">
       <GoBack url={"/"} addFeedBackLink={true} id={id} data={feedback} />
       <main className="pf-main-container pf-move-in">
         <div className="pf-feedback-details">
@@ -82,7 +82,7 @@ const FeedBackDetails = () => {
           </form>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
