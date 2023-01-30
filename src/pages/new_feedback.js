@@ -15,9 +15,9 @@ const NewFeedback = () => {
 
   const createNewFeedback = (event) => {
     event.preventDefault();
-    if (feedbackTitle == "" || feedbackDetails == "") {
-      setFeedbackDetailsError(feedbackDetails == "");
-      setFeedbackTitleError(feedbackTitleError == "");
+    if (feedbackTitle === "" || feedbackDetails === "") {
+      setFeedbackDetailsError(feedbackDetails === "");
+      setFeedbackTitleError(feedbackTitleError === "");
       return;
     }
 
@@ -25,6 +25,8 @@ const NewFeedback = () => {
     setFeedbackTitleError(false);
 
     // go ahead and create the suggesstion
+    const data = { category, feedbackTitle, feedbackDetails };
+    context.createNewSuggestion(data);
   };
 
   return (
