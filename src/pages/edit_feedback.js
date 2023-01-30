@@ -70,7 +70,7 @@ const EditFeedback = () => {
                 Edit Feedback
               </button>
               <button className="pf-btn pf-cancel">Cancel</button>
-              <button className="pf-btn pf-delete">Cancel</button>
+              <button className="pf-btn pf-delete">Delete</button>
             </div>
           </form>
         </div>

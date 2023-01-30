@@ -124,9 +124,10 @@ div.product-app-container div.container nav.pf-navigation div.pf-filter-containe
   margin-bottom: 1.2em;
 }
 
-div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter a {
+div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter button {
   display: inline-block;
   padding: 0.5em 1.2em;
+  cursor: pointer;
   margin-right: .7em;
   margin-bottom: .5em;
   background: #f2f4ff;
@@ -136,7 +137,7 @@ div.product-app-container div.container nav.pf-navigation div.pf-filter-containe
   font-size: .9em;
 }
 
-div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter a.active {
+div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter button.active {
   background: #4661e6;
   color: #ffffff;
 }

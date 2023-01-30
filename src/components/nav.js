@@ -10,6 +10,13 @@ const Nav = (showNavigation) => {
 
   const { plans, liveData, inProgress } = data;
   const [showSidebar, toggleSidebar] = useState(false);
+
+  const filterSuggestionList = (event) => {
+    const { target } = event;
+    const { featureName } = target.dataset;
+
+    data.filterSuggestionList(featureName);
+  };
   return showNavigation ? (
     <nav className="pf-navigation">
       <div className="pf-navigation-title-container">
@@ -39,12 +46,31 @@ const Nav = (showNavigation) => {
       <div className={`pf-filter-container ${showSidebar && "open"}`}>
         <div className={`pf-filter-roadmap-container `}>
           <div className="pf-filter">
-            <Link className="active">All</Link>
-            <Link>UI</Link>
-            <Link>UX</Link>
-            <Link>Enhancement</Link>
-            <Link>Bug</Link>
-            <Link>Feature</Link>
+            <button
+              onClick={filterSuggestionList}
+              className="active"
+              data-feature-name={"All"}
+            >
+              All
+            </button>
+            <button onClick={filterSuggestionList} data-feature-name="ui">
+              UI
+            </button>
+            <button onClick={filterSuggestionList} data-feature-name="ux">
+              UX
+            </button>
+            <button
+              onClick={filterSuggestionList}
+              data-feature-name="enhancement"
+            >
+              Enhancement
+            </button>
+            <button onClick={filterSuggestionList} data-feature-name="bug">
+              Bug
+            </button>
+            <button onClick={filterSuggestionList} data-feature-name="feature">
+              Feature
+            </button>
           </div>
           <div className="pf-roadmap">
             <div className="pf-roadmap-head">

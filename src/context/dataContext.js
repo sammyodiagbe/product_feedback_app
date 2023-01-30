@@ -34,6 +34,22 @@ const DataContextProvider = ({ children }) => {
     ...liveData,
   ]);
 
+  const [tempSuggesstionHolder, setTempSuggesstionHolder] =
+    useState(suggestion);
+
+  const filterSuggestionList = (featureName) => {
+    if (featureName == "All") {
+      setSuggestions(tempSuggesstionHolder);
+      return;
+    }
+    let temp = [...tempSuggesstionHolder];
+    setTempSuggesstionHolder(temp);
+    temp = temp.filter(
+      (suggesstion, index) => suggesstion.category == featureName
+    );
+    setSuggestions(temp);
+  };
+
   const sortByMostUpvotes = () => {
     let newSuggesstions = [...suggestions];
     newSuggesstions = newSuggesstions.sort(
@@ -94,6 +110,7 @@ const DataContextProvider = ({ children }) => {
         sortByMostComments,
         sortByLeastComments,
         getFeedback,
+        filterSuggestionList,
       }}
     >
       {children}
