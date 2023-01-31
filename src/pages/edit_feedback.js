@@ -19,6 +19,21 @@ const EditFeedback = () => {
   const [category, setCategory] = useState(oldCategory);
   const [feedbackTitle, setFeedbackTitle] = useState(title);
   const [feedbackDetails, setFeebackDetails] = useState(description);
+  const [feedbackTitleError, setFeedbackTitleError] = useState(false);
+  const [feedbackDetailsError, setFeedbackDetailsError] = useState(false);
+
+  const editFeedback = (event) => {
+    event.preventDefault();
+
+    if (feedbackTitle === "" || feedbackDetails === "") {
+      setFeedbackDetailsError(feedbackDetails === "");
+      setFeedbackTitleError(feedbackTitleError === "");
+      return;
+    }
+
+    setFeedbackDetailsError(false);
+    setFeedbackTitleError(false);
+  };
 
   return (
     <>
@@ -27,7 +42,7 @@ const EditFeedback = () => {
         <div className="pf-form-container">
           <img src={editIconButton} className="pf-f-icon" />
           <h1 className="pf-form-title">Editing '{title}'</h1>
-          <form>
+          <form onSubmit={editFeedback}>
             <div className="pf-input-field">
               <b>Feedback Title</b>
               <p>Add a short, descriptive headline.</p>
@@ -37,6 +52,13 @@ const EditFeedback = () => {
                 value={feedbackTitle}
                 onChange={(target) => setFeedbackTitle(target.value)}
               />
+              {feedbackTitleError && (
+                <span
+                  style={{ display: "block", padding: ".2em 0", color: "red" }}
+                >
+                  Can't be empty
+                </span>
+              )}
             </div>
             <div className="pf-input-field">
               <b>Category</b>
@@ -64,6 +86,13 @@ const EditFeedback = () => {
                 value={feedbackDetails}
                 onChange={(target) => setFeebackDetails(target.value)}
               ></textarea>
+              {feedbackDetailsError && (
+                <span
+                  style={{ display: "block", padding: ".2em 0", color: "red" }}
+                >
+                  Can't be empty
+                </span>
+              )}
             </div>
             <div className="pf-action-container">
               <button className="pf-btn pf-create-account">
