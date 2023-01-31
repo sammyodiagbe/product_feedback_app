@@ -5,7 +5,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
 
 const EditFeedback = () => {
-  const { id } = useParams();
+  let { id } = useParams();
   const location = useLocation();
   const context = useContext(dataContext);
   const { feedback } = location.state;
@@ -38,10 +38,12 @@ const EditFeedback = () => {
     setFeedbackDetailsError(false);
     setFeedbackTitleError(false);
 
+    id = parseInt(id);
     context.editFeedback({
       category,
       feedbackDetails,
       feedbackTitle,
+      id,
     });
   };
 
