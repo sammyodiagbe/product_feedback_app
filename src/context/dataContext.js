@@ -56,6 +56,13 @@ const DataContextProvider = ({ children }) => {
 
   const editFeedback = (newData) => {
     const { feedbackTitle, feedbackDetails, category, id } = newData;
+
+    const feedback = suggestions.find(
+      (suggestion, index) => suggestion.id === id
+    );
+    console.log("found feedback");
+
+    console.log(feedback);
   };
 
   const filterSuggestionList = (featureName) => {

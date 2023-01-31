@@ -1,19 +1,23 @@
 import GoBack from "../components/goBack";
 import { useState, useEffect, useContext } from "react";
 import editIconButton from "../assets/shared/icon-edit-feedback.svg";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
 
 const EditFeedback = () => {
   const { id } = useParams();
+  const location = useLocation();
   const context = useContext(dataContext);
-  const [feedback, setFeedback] = useState({});
-  useEffect(() => {
-    const feedback = context.getFeedback(id);
-    setFeedback(feedback);
-    // setFeedback(context.getFeedback(id));
-    // console.log(feedback);
-  }, []);
+  const { feedback } = location.state;
+
+  // console.log("Finding nemo ", f);
+
+  // useEffect(() => {
+  //   const feedback = context.getFeedback(id);
+  //   setFeedback(feedback);
+  //   // setFeedback(context.getFeedback(id));
+  //   // console.log(feedback);
+  // }, []);
 
   const { title, category: oldCategory, description } = feedback;
   const [category, setCategory] = useState(oldCategory);
@@ -43,7 +47,7 @@ const EditFeedback = () => {
 
   return (
     <>
-      <GoBack />
+      <GoBack backUrl={`/feedback/${feedback.id}`} />
       <div className="pf-main-container">
         <div className="pf-form-container">
           <img src={editIconButton} className="pf-f-icon" />
