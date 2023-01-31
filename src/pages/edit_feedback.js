@@ -33,6 +33,12 @@ const EditFeedback = () => {
 
     setFeedbackDetailsError(false);
     setFeedbackTitleError(false);
+
+    context.editFeedback({
+      category,
+      feedbackDetails,
+      feedbackTitle,
+    });
   };
 
   return (

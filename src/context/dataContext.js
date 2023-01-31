@@ -54,6 +54,10 @@ const DataContextProvider = ({ children }) => {
     suggestions.push(newFeedback);
   };
 
+  const editFeedback = (newData) => {
+    const { feedbackTitle, feedbackDetails, category, id } = newData;
+  };
+
   const filterSuggestionList = (featureName) => {
     if (featureName == "All") {
       setSuggestions(tempSuggesstionHolder);
@@ -129,6 +133,7 @@ const DataContextProvider = ({ children }) => {
         getFeedback,
         filterSuggestionList,
         createNewSuggestion,
+        editFeedback,
       }}
     >
       {children}
