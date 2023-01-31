@@ -37,6 +37,23 @@ const DataContextProvider = ({ children }) => {
   const [tempSuggesstionHolder, setTempSuggesstionHolder] =
     useState(suggestion);
 
+  const createNewSuggestion = (data) => {
+    const { category, filterTitle, filterDetails } = data;
+    const newFeedback = {
+      id: suggestions.length,
+      category,
+      title: filterTitle,
+      description: filterDetails,
+      status: "suggestion",
+      comments: [],
+      upvotes: 0,
+    };
+
+    // best bet is to try to sort the list of suggestion by id first
+
+    suggestions.push(newFeedback);
+  };
+
   const filterSuggestionList = (featureName) => {
     if (featureName == "All") {
       setSuggestions(tempSuggesstionHolder);
@@ -111,6 +128,7 @@ const DataContextProvider = ({ children }) => {
         sortByLeastComments,
         getFeedback,
         filterSuggestionList,
+        createNewSuggestion,
       }}
     >
       {children}
