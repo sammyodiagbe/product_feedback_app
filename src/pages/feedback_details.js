@@ -30,6 +30,19 @@ const FeedBackDetails = () => {
   ) : (
     <h1>No comments for this feedback</h1>
   );
+
+  const addCommentToFeedback = (event) => {
+    event.preventDefault();
+
+    if (userComment === "" || userComment == null) {
+      return;
+    }
+    const commentData = {
+      userComment,
+    };
+
+    context.addComment(id, commentData);
+  };
   return (
     <div className="feedback-container-content">
       <GoBack url={"/"} addFeedBackLink={true} id={id} data={feedback} />
@@ -57,7 +70,7 @@ const FeedBackDetails = () => {
         </div>
 
         <div className="pf-comment-box">
-          <form>
+          <form onSubmit={addCommentToFeedback}>
             <label htmlFor="add-comment">Add Comment</label>
             <textarea
               maxLength={250}

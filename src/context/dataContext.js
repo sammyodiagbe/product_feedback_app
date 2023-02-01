@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { generateRandomId } from "../backpack/helper";
 import data from "../data.json";
 
 const currentUser = data.currentUser;
@@ -85,12 +86,12 @@ const DataContextProvider = ({ children }) => {
 
     // find the post id
     const post = suggestions.find((post, ind) => {
-      return post.id === parseInt(postId);
+      return post.id.toString() === postId;
     });
 
     const comment = post.comments.find((comment, ind) => {
       commentIndex = ind;
-      return comment.id === parseInt(commentId);
+      return comment.id.toString() === commentId;
     });
 
     const replies = comment.replies ? [...post.comments.replies] : [];
@@ -102,6 +103,30 @@ const DataContextProvider = ({ children }) => {
 
     // something dosen't seem to work
     // add new reply to the list of replies of the comment
+  };
+
+  const addComment = (postid, commentsData) => {
+    const commentStructure = {
+      id: generateRandomId(8),
+      content: commentsData.userComment,
+      user: currentUser,
+      replies: [],
+    };
+
+    let postIndex = 0;
+
+    const post = suggestions.find((suggesstion, index) => {
+      postIndex = index;
+      return suggesstion.id.toString() === postid;
+    });
+
+    const comments = post.comments ? [...post.comments] : [];
+    comments.push(commentStructure);
+    post.comments = comments;
+    const tempSuggestions = [...suggestions];
+    tempSuggestions[postIndex] = post;
+
+    setSuggestions(tempSuggestions);
   };
 
   const filterSuggestionList = (featureName) => {
@@ -158,7 +183,7 @@ const DataContextProvider = ({ children }) => {
 
   const getFeedback = (id) => {
     for (const feedback of suggestions) {
-      if (feedback.id === parseInt(id)) {
+      if (feedback.id.toString() === id) {
         return feedback;
       }
     }
@@ -183,6 +208,7 @@ const DataContextProvider = ({ children }) => {
         createNewSuggestion,
         editFeedback,
         replyToUser,
+        addComment,
       }}
     >
       {children}
