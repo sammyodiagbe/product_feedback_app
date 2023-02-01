@@ -3,7 +3,7 @@ export const generateRandomId = (length) => {
   if (length > 10) length = 10;
   const alphaNumeric =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  const time = new Date.now();
+  const time = Date.now();
   let count = 0;
   while (count < length) {
     generatedId += alphaNumeric.charAt(
