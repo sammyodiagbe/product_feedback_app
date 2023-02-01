@@ -13,14 +13,15 @@ const Comment = ({ data }) => {
   const [showReplyBox, setShowReplyBox] = useState(false);
   const [userToReplyTo, setUserToReplyTo] = useState(username);
 
-  const replyToUser = () => {
+  const replyToUser = (event) => {
     //  IF THE REPLY BOX IS OPEN then
+    event.preventDefault();
     if (replyMessage !== "") {
       setReplyMessage("");
     }
 
     // we are replying to the user of this comment on this post as the logged on user
-    context.replyToUser(postId, replyMessage, userToReplyTo);
+    context.replyToUser(postId, id, replyMessage, userToReplyTo);
   };
 
   const setReplyReciever = (event) => {
@@ -60,6 +61,7 @@ const Comment = ({ data }) => {
           {content}
         </p>
       </div>
+
       <div className="pf-replies">
         {repliesStructure && (
           <div className="pf-replies">{repliesStructure}</div>

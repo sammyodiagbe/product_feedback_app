@@ -74,24 +74,33 @@ const DataContextProvider = ({ children }) => {
     setSuggestions(arr);
   };
 
-  const replyToUser = (postId, reply, repliedTo) => {
+  const replyToUser = (postId, commentId, reply, repliedTo) => {
+    console.log(postId, reply, repliedTo);
     const replyStructure = {
       content: reply,
       replyingTo: repliedTo,
       user: currentUser,
     };
+    let commentIndex = 0;
 
     // find the post id
     const post = suggestions.find((post, ind) => {
-      return post.id === postId;
+      return post.id === parseInt(postId);
     });
 
-    const comments = post.comments ? [...post.comments] : [];
-    comments.push(replyStructure);
+    const comment = post.comments.find((comment, ind) => {
+      commentIndex = ind;
+      return comment.id === parseInt(commentId);
+    });
 
-    post.comments = comments;
-
+    const replies = comment.replies ? [...post.comments.replies] : [];
+    replies.push(replyStructure);
+    comment.replies = replies;
+    post.comments[commentIndex] = comment;
+    console.log(postId, post);
     suggestions[postId] = post;
+
+    // something dosen't seem to work
     // add new reply to the list of replies of the comment
   };
 
@@ -100,7 +109,9 @@ const DataContextProvider = ({ children }) => {
       setSuggestions(tempSuggesstionHolder);
       return;
     }
+
     let temp = [...tempSuggesstionHolder];
+
     setTempSuggesstionHolder(temp);
     temp = temp.filter(
       (suggesstion, index) => suggesstion.category == featureName
