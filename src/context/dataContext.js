@@ -74,6 +74,27 @@ const DataContextProvider = ({ children }) => {
     setSuggestions(arr);
   };
 
+  const replyToUser = (postId, reply, repliedTo) => {
+    const replyStructure = {
+      content: reply,
+      replyingTo: repliedTo,
+      user: currentUser,
+    };
+
+    // find the post id
+    const post = suggestions.find((post, ind) => {
+      return post.id === postId;
+    });
+
+    const comments = post.comments ? [...post.comments] : [];
+    comments.push(replyStructure);
+
+    post.comments = comments;
+
+    suggestions[postId] = post;
+    // add new reply to the list of replies of the comment
+  };
+
   const filterSuggestionList = (featureName) => {
     if (featureName == "All") {
       setSuggestions(tempSuggesstionHolder);
@@ -150,6 +171,7 @@ const DataContextProvider = ({ children }) => {
         filterSuggestionList,
         createNewSuggestion,
         editFeedback,
+        replyToUser,
       }}
     >
       {children}
