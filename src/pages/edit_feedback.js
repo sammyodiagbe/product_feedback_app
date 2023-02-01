@@ -20,6 +20,8 @@ const EditFeedback = () => {
   // }, []);
 
   const { title, category: oldCategory, description } = feedback;
+
+  console.log(title, oldCategory, description);
   const [category, setCategory] = useState(oldCategory);
   const [feedbackTitle, setFeedbackTitle] = useState(title);
   const [feedbackDetails, setFeebackDetails] = useState(description);
@@ -62,7 +64,7 @@ const EditFeedback = () => {
                 type="text"
                 className="pf-input-field"
                 value={feedbackTitle}
-                onChange={(target) => setFeedbackTitle(target.value)}
+                onChange={(event) => setFeedbackTitle(event.target.value)}
               />
               {feedbackTitleError && (
                 <span
@@ -77,7 +79,7 @@ const EditFeedback = () => {
               <p>Choose a category for your feedback.</p>
               <select
                 defaultValue={category}
-                onChange={(target) => setCategory(target.value)}
+                onChange={(event) => setCategory(event.target.value)}
               >
                 <option>Feature</option>
                 <option>Enhancement</option>
@@ -96,7 +98,7 @@ const EditFeedback = () => {
                 type="text"
                 className="pf-input-field"
                 value={feedbackDetails}
-                onChange={(target) => setFeebackDetails(target.value)}
+                onChange={(event) => setFeebackDetails(event.target.value)}
               ></textarea>
               {feedbackDetailsError && (
                 <span
