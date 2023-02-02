@@ -125,7 +125,15 @@ const EditFeedback = () => {
             <button className="pf-btn pf-create-account" onClick={editFeedback}>
               Edit Feedback
             </button>
-            <button className="pf-btn pf-cancel">Cancel</button>
+            <button
+              className="pf-btn pf-cancel"
+              onClick={(event) => {
+                event.preventDefault();
+                navigate(`/feedback/${id}`);
+              }}
+            >
+              Cancel
+            </button>
             <button className="pf-btn pf-delete" onClick={deleteFeedback}>
               Delete
             </button>

@@ -101,7 +101,15 @@ const NewFeedback = () => {
             </div>
             <div className="pf-action-container">
               <button className="pf-btn pf-create-account">Add Feedback</button>
-              <button className="pf-btn pf-cancel">Cancel</button>
+              <button
+                className="pf-btn pf-cancel"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigate("/");
+                }}
+              >
+                Cancel
+              </button>
             </div>
           </form>
         </div>

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Nav from "../components/nav";
 import SubNav from "../components/subnav";
 import { dataContext } from "../context/dataContext";
@@ -8,6 +8,10 @@ import Suggestion from "../components/Suggestion";
 const Suggestions = () => {
   const data = useContext(dataContext);
   const { suggestions } = data;
+
+  useEffect(() => {
+    window.document.title = "Suggestions - home";
+  }, []);
   const SuggestionStructure = suggestions.length ? (
     suggestions.map((suggestion, index) => {
       return <Suggestion data={suggestion} key={index} />;
