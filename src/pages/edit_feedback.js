@@ -1,7 +1,7 @@
 import GoBack from "../components/goBack";
 import { useState, useEffect, useContext } from "react";
 import editIconButton from "../assets/shared/icon-edit-feedback.svg";
-import { useLocation, useParams } from "react-router-dom";
+import { Router, useLocation, useNavigate, useParams } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
 
 const EditFeedback = () => {
@@ -20,6 +20,7 @@ const EditFeedback = () => {
   // }, []);
 
   const { title, category: oldCategory, description } = feedback;
+  const navigate = useNavigate();
 
   console.log(title, oldCategory, description);
   const [category, setCategory] = useState(oldCategory);
@@ -51,6 +52,7 @@ const EditFeedback = () => {
 
   const deleteFeedback = () => {
     context.deleteFeedback(id);
+    navigate("/");
   };
 
   return (

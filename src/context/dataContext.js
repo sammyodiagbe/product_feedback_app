@@ -143,11 +143,13 @@ const DataContextProvider = ({ children }) => {
   };
 
   const deleteFeedback = (feedbackId) => {
-    const tempArr = [...suggestions];
-
+    let tempArr = [...suggestions];
+    console.log(tempArr.length);
     tempArr = tempArr.filter(
-      (suggestion, index) => suggestion.id.toString() !== feedbackId.toString
+      (suggestion, index) => suggestion.id.toString() !== feedbackId.toString()
     );
+    console.log("===");
+    console.log(tempArr.length);
     setSuggestions(tempArr);
   };
   const filterSuggestionList = (featureName) => {

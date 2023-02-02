@@ -32,7 +32,7 @@ div.pf-main-container div.pf-form-container form div.pf-input-field input, div.p
   resize: none;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-action-container button {
+div.pf-main-container div.pf-form-container div.pf-action-container button {
   display: block;
   width: 100%;
   color: #fff;
@@ -41,17 +41,17 @@ div.pf-main-container div.pf-form-container form div.pf-action-container button 
   font-weight: bold;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-create-account {
+div.pf-main-container div.pf-form-container div.pf-action-container button.pf-create-account {
   background: #C75AF6;
   margin-bottom: 0.8em;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-cancel {
+div.pf-main-container div.pf-form-container div.pf-action-container button.pf-cancel {
   background: #3A4374;
   margin-bottom: 0.8em;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-action-container button.pf-delete {
+div.pf-main-container div.pf-form-container div.pf-action-container button.pf-delete {
   background: #D73737;
 }
 

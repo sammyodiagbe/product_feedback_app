@@ -32,28 +32,28 @@ div.pf-main-container {
                 }
             }
 
-            div.pf-action-container {
-                button {
-                    display: block;
-                    width: 100%;
-                    color: #fff;
-                    padding: $padding;
-                    border-radius: $border_radius_link;
-                    font-weight: bold;
-                    &.pf-create-account {
-                        background: $call_to_action_purple;
-                        margin-bottom: $space_between_elem;
-                    }
-
-                    &.pf-cancel {
-                        background: $dark_blue;
-                        margin-bottom: $space_between_elem;
-
-                    }
-
-                    &.pf-delete {
-                        background: $delete_btn;
-                    }
+        }
+        div.pf-action-container {
+            button {
+                display: block;
+                width: 100%;
+                color: #fff;
+                padding: $padding;
+                border-radius: $border_radius_link;
+                font-weight: bold;
+                &.pf-create-account {
+                    background: $call_to_action_purple;
+                    margin-bottom: $space_between_elem;
+                }
+    
+                &.pf-cancel {
+                    background: $dark_blue;
+                    margin-bottom: $space_between_elem;
+    
+                }
+    
+                &.pf-delete {
+                    background: $delete_btn;
                 }
             }
         }
