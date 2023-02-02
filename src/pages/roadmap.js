@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RoadmapContainer from "../components/roadmapContainer";
 import SubNav from "../components/subnav";
 import { dataContext } from "../context/dataContext";
@@ -9,6 +9,10 @@ const RoadMap = () => {
   const { plans, inProgress, liveData } = context;
   const [activeState, setActiveState] = useState("Planned");
   const [movementClass, setMovementClass] = useState("Planned");
+
+  useEffect(() => {
+    window.document.title = "Roamap ***";
+  }, []);
 
   const renderplans = plans.map((plan, index) => {
     return <RoadmapContainer data={plan} type="Planned" key={index} />;

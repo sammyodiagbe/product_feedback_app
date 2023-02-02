@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import GoBack from "../components/goBack";
 import "../styles/feedback.css";
 
@@ -17,6 +17,10 @@ const NewFeedback = () => {
   const [feedbackDetails, setFeebackDetails] = useState("");
   const [feedbackTitleError, setFeedbackTitleError] = useState(false);
   const [feedbackDetailsError, setFeedbackDetailsError] = useState(false);
+
+  useEffect(() => {
+    window.document.title = "Create new Feedback";
+  }, []);
 
   const createNewFeedback = (event) => {
     event.preventDefault();

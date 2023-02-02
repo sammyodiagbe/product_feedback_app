@@ -14,12 +14,11 @@ const EditFeedback = () => {
 
   // console.log("Finding nemo ", f);
 
-  // useEffect(() => {
-  //   const feedback = context.getFeedback(id);
-  //   setFeedback(feedback);
-  //   // setFeedback(context.getFeedback(id));
-  //   // console.log(feedback);
-  // }, []);
+  useEffect(() => {
+    // setFeedback(context.getFeedback(id));
+    // console.log(feedback);
+    window.document.title = "Edit feedback";
+  }, []);
 
   const { title, category: oldCategory, description } = feedback;
   const navigate = useNavigate();
