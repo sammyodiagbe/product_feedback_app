@@ -187,6 +187,26 @@
             }
         }
 
+        div.roadmap-container {
+          width: 1110px;
+          margin: 0 auto;
+          padding-top: $padding;
+
+          div.pf-sub-nav {
+            border-radius: 10px;
+          }
+
+          div.pf-content {
+            width: auto;
+            padding: $padding 0;
+            position: static;
+            row-gap: 10px;
+            column-gap: 10px;
+            div.pf-r-container {
+              padding: 0;
+            }
+          }
+        }
         div.pf-f-container, div.feedback-container-content {
           width: 700px;
           margin: 0 auto;

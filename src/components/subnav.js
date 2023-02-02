@@ -90,7 +90,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
       <Link
         className="pf-add-feedback"
         to="/new-feedback"
-        state={{ prev_url: pathname }}
+        state={{ prev_url: "/roadmap" }}
       >
         + Add Feedback
       </Link>

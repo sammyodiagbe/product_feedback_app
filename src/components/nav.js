@@ -16,6 +16,7 @@ const Nav = (showNavigation) => {
     const { featureName } = target.dataset;
 
     data.filterSuggestionList(featureName);
+    toggleSidebar(false);
   };
   return showNavigation ? (
     <nav className="pf-navigation">

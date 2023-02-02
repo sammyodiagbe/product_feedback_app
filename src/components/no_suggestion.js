@@ -10,7 +10,7 @@ const NoSuggestion = () => {
         Got a suggestion? Found a bug that needs to be squashed? We love hearing
         about new ideas to imrove our app
       </p>
-      <Link>+ Add Feedback</Link>
+      <Link to="/new-feedback">+ Add Feedback</Link>
     </div>
   );
 };

@@ -168,6 +168,25 @@
         grid-template-rows: -webkit-min-content auto;
         grid-template-rows: min-content auto;
   }
+  div.product-app-container div.roadmap-container {
+    width: 1110px;
+    margin: 0 auto;
+    padding-top: 1.2em;
+  }
+  div.product-app-container div.roadmap-container div.pf-sub-nav {
+    border-radius: 10px;
+  }
+  div.product-app-container div.roadmap-container div.pf-content {
+    width: auto;
+    padding: 1.2em 0;
+    position: static;
+    row-gap: 10px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  div.product-app-container div.roadmap-container div.pf-content div.pf-r-container {
+    padding: 0;
+  }
   div.product-app-container div.pf-f-container, div.product-app-container div.feedback-container-content {
     width: 700px;
     margin: 0 auto;
