@@ -4,9 +4,13 @@ import "../styles/feedback.css";
 
 import newFeedbackIcon from "../assets/shared/icon-new-feedback.svg";
 import { dataContext } from "../context/dataContext";
+import { notificationContext } from "../context/notificationContext";
+import { useNavigate } from "react-router-dom";
 
 const NewFeedback = () => {
   const context = useContext(dataContext);
+  const alertContext = useContext(notificationContext);
+  const navigate = useNavigate();
   const [category, setCategory] = useState("Feature");
   const [feedbackTitle, setFeedbackTitle] = useState("");
   const [feedbackDetails, setFeebackDetails] = useState("");
@@ -27,6 +31,8 @@ const NewFeedback = () => {
     // go ahead and create the suggesstion
     const data = { category, feedbackTitle, feedbackDetails };
     context.createNewSuggestion(data);
+    navigate("/");
+    alertContext.setNotificationMessage("Feedback created successfully");
   };
 
   return (
@@ -44,7 +50,7 @@ const NewFeedback = () => {
                 type="text"
                 className="pf-input-field"
                 value={feedbackTitle}
-                onChange={(target) => setFeedbackTitle(target.value)}
+                onChange={(event) => setFeedbackTitle(event.target.value)}
               />
               {feedbackTitleError && (
                 <span
@@ -59,7 +65,7 @@ const NewFeedback = () => {
               <p>Choose a category for your feedback.</p>
               <select
                 defaultValue={category}
-                onChange={(target) => setCategory(target.value)}
+                onChange={(event) => setCategory(event.target.value)}
               >
                 <option>Feature</option>
                 <option>Enhancement</option>
@@ -78,7 +84,7 @@ const NewFeedback = () => {
                 type="text"
                 className="pf-input-field"
                 value={feedbackDetails}
-                onChange={(target) => setFeebackDetails(target.value)}
+                onChange={(event) => setFeebackDetails(event.target.value)}
               ></textarea>
               {feedbackDetailsError && (
                 <span

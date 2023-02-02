@@ -3,10 +3,12 @@ import { useState, useEffect, useContext } from "react";
 import editIconButton from "../assets/shared/icon-edit-feedback.svg";
 import { Router, useLocation, useNavigate, useParams } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
+import { notificationContext } from "../context/notificationContext";
 
 const EditFeedback = () => {
   let { id } = useParams();
   const location = useLocation();
+  const alertContext = useContext(notificationContext);
   const context = useContext(dataContext);
   const { feedback } = location.state;
 
@@ -48,10 +50,15 @@ const EditFeedback = () => {
       feedbackTitle,
       id,
     });
+    alertContext.setNotificationMessage("Successfully updated feedback");
+    navigate(`/feedback/${id}`, {
+      state: { feedback },
+    });
   };
 
   const deleteFeedback = () => {
     context.deleteFeedback(id);
+    alertContext.setNotificationMessage("Successfully deleted feedback");
     navigate("/");
   };
 

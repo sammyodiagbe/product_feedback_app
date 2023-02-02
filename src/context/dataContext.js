@@ -39,20 +39,23 @@ const DataContextProvider = ({ children }) => {
     useState(suggestion);
 
   const createNewSuggestion = (data) => {
-    const { category, filterTitle, filterDetails } = data;
+    const { category, feedbackTitle, feedbackDetails } = data;
     const newFeedback = {
-      id: suggestions.length,
+      id: generateRandomId(10),
       category,
-      title: filterTitle,
-      description: filterDetails,
+      title: feedbackTitle,
+      description: feedbackDetails,
       status: "suggestion",
       comments: [],
       upvotes: 0,
     };
 
-    // best bet is to try to sort the list of suggestion by id first
+    console.log(newFeedback);
 
-    suggestions.push(newFeedback);
+    // best bet is to try to sort the list of suggestion by id first
+    const tempList = [...suggestions];
+    tempList.push(newFeedback);
+    setSuggestions(tempList);
   };
 
   const editFeedback = (newData) => {

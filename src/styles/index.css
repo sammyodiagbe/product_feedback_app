@@ -31,6 +31,54 @@ a.pf-add-feedback {
   border-radius: 8px;
 }
 
+div.snackbar {
+  position: fixed;
+  padding: 1.2em 2em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 8px;
+  background: #234;
+  color: #fff;
+  top: 100vh;
+  -webkit-animation: slide-up;
+          animation: slide-up;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    top: 100vh;
+  }
+  50% {
+    top: 80vh;
+  }
+  70% {
+    top: 80vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    top: 100vh;
+  }
+  50% {
+    top: 80vh;
+  }
+  70% {
+    top: 80vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
 div.product-app-container div.pf-go-back {
   padding: 1.2em;
   display: -webkit-box;

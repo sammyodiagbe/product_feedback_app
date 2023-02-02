@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
 
-export const notificationContext = createContext();
+export const notificationContext = createContext({});
 
 const NotificationContextWrapper = ({ children }) => {
   const [message, setShowNotificationMessage] = useState(null);
 
   const setNotificationMessage = (message) => {
-    setNotificationMessage(message);
+    setShowNotificationMessage(message);
     setTimeout(() => setShowNotificationMessage(null), 5000);
   };
 
