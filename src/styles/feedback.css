@@ -1,28 +1,29 @@
-div.pf-main-container {
+div.pf-f-container div.pf-main-container {
+  margin-top: 2.5em;
   padding: 2em 1.2em;
 }
 
-div.pf-main-container div.pf-form-container {
+div.pf-f-container div.pf-main-container div.pf-form-container {
   background: #ffffff;
   padding: 1.2em;
   border-radius: 8px;
 }
 
-div.pf-main-container div.pf-form-container img.pf-f-icon {
+div.pf-f-container div.pf-main-container div.pf-form-container img.pf-f-icon {
   position: relative;
   top: -3em;
 }
 
-div.pf-main-container div.pf-form-container h1.pf-form-title {
+div.pf-f-container div.pf-main-container div.pf-form-container h1.pf-form-title {
   font-size: 24px;
   margin-bottom: 1em;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-input-field {
+div.pf-f-container div.pf-main-container div.pf-form-container form div.pf-input-field {
   margin-bottom: 0.8em;
 }
 
-div.pf-main-container div.pf-form-container form div.pf-input-field input, div.pf-main-container div.pf-form-container form div.pf-input-field textarea, div.pf-main-container div.pf-form-container form div.pf-input-field select {
+div.pf-f-container div.pf-main-container div.pf-form-container form div.pf-input-field input, div.pf-f-container div.pf-main-container div.pf-form-container form div.pf-input-field textarea, div.pf-f-container div.pf-main-container div.pf-form-container form div.pf-input-field select {
   width: 100%;
   padding: 1.2em;
   background: #f2f4ff;
@@ -32,7 +33,7 @@ div.pf-main-container div.pf-form-container form div.pf-input-field input, div.p
   resize: none;
 }
 
-div.pf-main-container div.pf-form-container div.pf-action-container button {
+div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button {
   display: block;
   width: 100%;
   color: #fff;
@@ -41,44 +42,21 @@ div.pf-main-container div.pf-form-container div.pf-action-container button {
   font-weight: bold;
 }
 
-div.pf-main-container div.pf-form-container div.pf-action-container button.pf-create-account {
+div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-create-account {
   background: #C75AF6;
   margin-bottom: 0.8em;
 }
 
-div.pf-main-container div.pf-form-container div.pf-action-container button.pf-cancel {
+div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-cancel {
   background: #3A4374;
   margin-bottom: 0.8em;
 }
 
-div.pf-main-container div.pf-form-container div.pf-action-container button.pf-delete {
+div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-delete {
   background: #D73737;
 }
 
-@media screen and (min-width: 768px) {
-  div.product-app-container div.container div.pf-main-container {
-    padding: 2em;
-  }
-  div.product-app-container div.container div.pf-main-container div.pf-comment-container {
-    width: 700px;
-  }
-  div.product-app-container div.container div.pf-main-container div.pf-form-container {
-    width: 600px;
-    margin: 0 auto;
-  }
-  div.product-app-container div.container div.pf-go-back {
-    width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  div.product-app-container div.container {
-    display: block;
-  }
-  div.product-app-container div.container div.feedback-container-content {
-    width: 730px;
-    margin: 0 auto;
-  }
+div.pf-f-container div.pf-go-back {
+  padding: 1.2em;
 }
 /*# sourceMappingURL=feedback.css.map */

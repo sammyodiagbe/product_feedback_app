@@ -3,23 +3,27 @@
 
 $space_between_elem: .9em;
 
+a.pf-add-feedback {
+    @include add-feedback-button($bluish_marlin);
+}
+
 div.product-app-container {
+
+    div.pf-go-back {
+        padding: $padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a.pf-go-back-link {
+            font-weight: bold;
+        }
+    }
     div.container {
         
-        a.pf-add-feedback {
-            @include add-feedback-button($bluish_marlin);
-        }
+        
     
     
-        div.pf-go-back {
-            padding: $padding;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            a.pf-go-back-link {
-                font-weight: bold;
-            }
-        }
+        
         // nmobile-navigation
          nav.pf-navigation {
             background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
@@ -175,41 +179,7 @@ div.product-app-container {
                 }
             }
     
-            div.pf-comment-container {
-                div.pf-total-comments {
-                    padding:$padding;
-                    background:$white;
-                    h1{
-                        font-size: 24px;
-                    }
-                }
-    
-                // div.pf-comments {
-                //     div.pf-comment {
-                //         padding:$padding;
-                //         background:$white;
-                //         margin-bottom: $space_between_elem;
-    
-                //         div.pf-comment-head {
-                //             display: grid;
-                //             grid-template-columns: max-content auto max-content;
-                //             padding-bottom:.8em;
-    
-                //             img {
-                //                 width:50px;
-                //                 height: 50px;
-                //                 border-radius: 50px;
-                //                 margin-right:$space_between_elem;
-                //             }
-                //         }
-    
-                //          p{
-                //             text-align: justify;
-                //             word-spacing: .06em;
-                //          }
-                //     }
-                // }
-            }
+            
             div.pf-suggestion {
                 padding: $padding;
                 display: grid;
@@ -313,4 +283,3 @@ div.product-app-container {
     }
 }
 
-@import "./media\ queries/index";

@@ -2,8 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import chevronLeft from "../assets/shared/icon-arrow-left.svg";
 
 const GoBack = ({ addFeedBackLink, data, backUrl }) => {
-  const location = useLocation();
-
   return (
     <div className="pf-go-back">
       <Link to={backUrl} className="pf-go-back-link">

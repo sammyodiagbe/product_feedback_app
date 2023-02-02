@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 
-div.product-app-container div.container a.pf-add-feedback {
+a.pf-add-feedback {
   display: inline-block;
   padding: 0.7em 1.2em;
   background-color: #4661e6;
@@ -31,7 +31,7 @@ div.product-app-container div.container a.pf-add-feedback {
   border-radius: 8px;
 }
 
-div.product-app-container div.container div.pf-go-back {
+div.product-app-container div.pf-go-back {
   padding: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +44,7 @@ div.product-app-container div.container div.pf-go-back {
           justify-content: space-between;
 }
 
-div.product-app-container div.container div.pf-go-back a.pf-go-back-link {
+div.product-app-container div.pf-go-back a.pf-go-back-link {
   font-weight: bold;
 }
 
@@ -246,15 +246,6 @@ div.product-app-container div.container main.pf-main-container div.pf-vertical-l
   border-radius: 8px;
 }
 
-div.product-app-container div.container main.pf-main-container div.pf-comment-container div.pf-total-comments {
-  padding: 1.2em;
-  background: #ffffff;
-}
-
-div.product-app-container div.container main.pf-main-container div.pf-comment-container div.pf-total-comments h1 {
-  font-size: 24px;
-}
-
 div.product-app-container div.container main.pf-main-container div.pf-suggestion {
   padding: 1.2em;
   display: -ms-grid;
@@ -370,135 +361,5 @@ div.product-app-container div.container main.pf-main-container div.pf-sub-nav bu
 
 div.product-app-container div.container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down img {
   width: 12px;
-}
-
-@media screen and (min-width: 768px) {
-  div.product-app-container div.container main.pf-main-container {
-    padding: 1.2em;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-sub-nav {
-    border-radius: 8px;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down {
-    border-radius: 8px;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-sub-nav button.pf-custom-drop-down div.pf-total-suggesstions {
-    display: block;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 10px;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-vertical-list {
-    padding: 1.2em 0;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-vertical-list div.pf-suggestion {
-        grid-template-areas: "pf-upvote pf-details pf-comments";
-    -ms-grid-columns: min-content auto min-content;
-        grid-template-columns: -webkit-min-content auto -webkit-min-content;
-        grid-template-columns: min-content auto min-content;
-    grid-gap: 24px;
-  }
-  div.product-app-container div.container main.pf-main-container div.pf-vertical-list div.pf-suggestion button.pf-upvote-button {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1.2em 5px;
-    min-width: 50px;
-  }
-  div.product-app-container div.container nav.pf-navigation {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 223px auto;
-        grid-template-columns: 223px auto;
-    gap: 10px;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    background: none;
-    padding: 1.2em;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-navigation-title-container {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    background: url(../assets/suggestions/mobile/background-header.png) no-repeat;
-    background-position: bottom;
-    border-radius: 8px;
-    background-size: cover;
-    height: auto;
-    padding-bottom: 3em;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-navigation-title-container button.pf-navigation-trigger {
-    display: none;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-filter-container {
-    position: static;
-    height: auto;
-    width: auto;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container {
-    height: auto;
-    gap: 10px;
-    width: 100%;
-    padding: 0;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    position: static;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container div.pf-filter {
-    margin-bottom: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  div.product-app-container div.container {
-    width: 1110px;
-    margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 300px auto;
-        grid-template-columns: 300px auto;
-    grid-gap: 8px;
-  }
-  div.product-app-container div.container nav.pf-navigation {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-navigation-title-container {
-    height: 200px;
-    margin-bottom: 1em;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-filter-container {
-    position: static !important;
-    height: auto;
-    width: auto;
-    background: transparent;
-  }
-  div.product-app-container div.container nav.pf-navigation div.pf-filter-container div.pf-filter-roadmap-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: min-content auto;
-        grid-template-rows: -webkit-min-content auto;
-        grid-template-rows: min-content auto;
-  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -30,8 +30,8 @@ const NewFeedback = () => {
   };
 
   return (
-    <>
-      <GoBack addFeedBackLink={false} />
+    <div className="pf-f-container">
+      <GoBack addFeedBackLink={false} backUrl="/" />
       <div className="pf-main-container">
         <div className="pf-form-container">
           <img src={newFeedbackIcon} className="pf-f-icon" />
@@ -95,7 +95,7 @@ const NewFeedback = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

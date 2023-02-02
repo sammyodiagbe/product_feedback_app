@@ -7,6 +7,7 @@ import "./styles/index.css";
 import "./styles/subnav.css";
 import "./styles/feeback_details.css";
 import "./styles/roadmap.css";
+import "./styles/mediaquery.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

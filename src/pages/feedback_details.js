@@ -45,7 +45,7 @@ const FeedBackDetails = () => {
   };
   return (
     <div className="feedback-container-content">
-      <GoBack url={"/"} addFeedBackLink={true} id={id} data={feedback} />
+      <GoBack backUrl={"/"} addFeedBackLink={true} id={id} data={feedback} />
       <main className="pf-main-container pf-move-in">
         <div className="pf-feedback-details">
           <button className="pf-upvote-button">

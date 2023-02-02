@@ -12,20 +12,14 @@ function App() {
     <Router>
       <DataContextProvider>
         <div className="product-app-container">
-          <div className="container">
-            <Routes>
-              {/* the routes go here */}
-              <Route exact path="/" element={<Suggestions />} />
-              <Route exact path="/feedback/:id" element={<FeedBackDetails />} />
-              <Route exact path="/new-feedback" element={<NewFeedback />} />
-              <Route
-                exact
-                path="/edit-feedback/:id"
-                element={<EditFeedback />}
-              />
-              <Route exact path="/roadmap" element={<RoadMap />} />
-            </Routes>
-          </div>
+          <Routes>
+            {/* the routes go here */}
+            <Route exact path="/" element={<Suggestions />} />
+            <Route exact path="/feedback/:id" element={<FeedBackDetails />} />
+            <Route exact path="/new-feedback" element={<NewFeedback />} />
+            <Route exact path="/edit-feedback/:id" element={<EditFeedback />} />
+            <Route exact path="/roadmap" element={<RoadMap />} />
+          </Routes>
         </div>
       </DataContextProvider>
     </Router>

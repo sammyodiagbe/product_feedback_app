@@ -1,5 +1,6 @@
 
-@import "./screensize";
+@import "./media\ queries/screensize";
+@import "./variables";
 @media screen and (min-width: $tablets) {
 
 
@@ -43,6 +44,33 @@
                     }
                 }
             }
+
+            div.roadmap-container {
+                div.pf-sub-nav {
+                  border-radius: 9px;
+                }
+        
+                div.pf-roadmap-nav {
+                  border-radius: 9px;
+                  div.pf-nav-top {
+                  }
+                }
+        
+                div.pf-content {
+                  width: 100%;
+                  position: static;
+                  grid-gap: 10px;
+                  &.planned,
+                  &.In-Progress,
+                  &.live {
+                    left: 0;
+                  }
+        
+                  div.pf-r-container {
+                    padding: $padding 0;
+                  }
+                }
+              }
 
             nav.pf-navigation {
                 display: grid;
@@ -97,6 +125,43 @@
             display: grid;
             grid-template-columns: 300px auto;
             grid-gap: 8px;
+
+            div.container {
+                div.roadmap-container {
+                  width: 1100px;
+                  margin: 0 auto;
+                  div.pf-sub-nav {
+                    border-radius: 9px;
+                  }
+          
+                  div.pf-roadmap-nav {
+                    border-radius: 9px;
+                    div.pf-nav-top {
+                    }
+                  }
+          
+                  div.pf-content {
+                    width: 100%;
+                    position: static;
+                    grid-gap: 10px;
+                    &.planned,
+                    &.In-Progress,
+                    &.live {
+                      left: 0;
+                    }
+          
+                    div.pf-r-container {
+                      padding: $padding 0;
+                    }
+                  }
+                }
+              }
+            //   end
+
+            div.feedback-container-content {
+                width: 730px;
+                margin: 0 auto;
+            }
             nav.pf-navigation {
                 grid-template-columns: 1fr;
                 position: sticky;
@@ -120,6 +185,15 @@
                     }
                 }
             }
+        }
+
+        div.pf-f-container, div.feedback-container-content {
+          width: 700px;
+          margin: 0 auto;
+
+          div.pf-main-container {
+            padding: 1.2em 0;
+          }
         }
     }
 }

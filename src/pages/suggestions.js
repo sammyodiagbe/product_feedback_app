@@ -16,13 +16,14 @@ const Suggestions = () => {
     <NoSuggestion />
   );
   return (
-    <>
+    <div className="container">
       <Nav />
+
       <main className="pf-main-container">
         <SubNav />
         <div className="pf-vertical-list">{SuggestionStructure}</div>
       </main>
-    </>
+    </div>
   );
 };
 

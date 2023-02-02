@@ -56,7 +56,7 @@ const EditFeedback = () => {
   };
 
   return (
-    <>
+    <div className="feedback-container-content">
       <GoBack backUrl={`/feedback/${feedback.id}`} />
       <div className="pf-main-container">
         <div className="pf-form-container">
@@ -126,7 +126,7 @@ const EditFeedback = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
