@@ -194,5 +194,29 @@
   div.product-app-container div.pf-f-container div.pf-main-container, div.product-app-container div.feedback-container-content div.pf-main-container {
     padding: 1.2em 0;
   }
+  div.product-app-container div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container, div.product-app-container div.feedback-container-content div.pf-main-container div.pf-form-container div.pf-action-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "pf-delete . . pf-cancel pf-create-account";
+    grid-gap: 5px;
+  }
+  div.product-app-container div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button, div.product-app-container div.feedback-container-content div.pf-main-container div.pf-form-container div.pf-action-container button {
+    margin-bottom: 0;
+  }
+  div.product-app-container div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-create-account, div.product-app-container div.feedback-container-content div.pf-main-container div.pf-form-container div.pf-action-container button.pf-create-account {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: pf-create-account;
+  }
+  div.product-app-container div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-cancel, div.product-app-container div.feedback-container-content div.pf-main-container div.pf-form-container div.pf-action-container button.pf-cancel {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: pf-cancel;
+  }
+  div.product-app-container div.pf-f-container div.pf-main-container div.pf-form-container div.pf-action-container button.pf-delete, div.product-app-container div.feedback-container-content div.pf-main-container div.pf-form-container div.pf-action-container button.pf-delete {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: pf-delete;
+  }
 }
 /*# sourceMappingURL=mediaquery.css.map */

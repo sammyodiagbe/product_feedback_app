@@ -213,6 +213,30 @@
 
           div.pf-main-container {
             padding: 1.2em 0;
+
+            div.pf-form-container {
+              div.pf-action-container {
+                display: grid;
+                grid-template-areas: "pf-delete . . pf-cancel pf-create-account";
+                grid-gap: 5px;
+                button {
+                  margin-bottom: 0;
+                  &.pf-create-account {
+                    grid-area: pf-create-account;
+                    
+                  }
+  
+                  &.pf-cancel {
+                    grid-area: pf-cancel;
+                  }
+  
+                  &.pf-delete {
+                    grid-area: pf-delete;
+                  }
+                }
+
+              }
+            }
           }
         }
     }
