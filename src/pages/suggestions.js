@@ -20,7 +20,7 @@ const Suggestions = () => {
       <Nav />
 
       <main className="pf-main-container">
-        <SubNav />
+        <SubNav prev_url={"/"} />
         <div className="pf-vertical-list">{SuggestionStructure}</div>
       </main>
     </div>

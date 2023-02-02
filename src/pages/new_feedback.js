@@ -5,12 +5,13 @@ import "../styles/feedback.css";
 import newFeedbackIcon from "../assets/shared/icon-new-feedback.svg";
 import { dataContext } from "../context/dataContext";
 import { notificationContext } from "../context/notificationContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NewFeedback = () => {
   const context = useContext(dataContext);
   const alertContext = useContext(notificationContext);
   const navigate = useNavigate();
+  const { prev_url } = useLocation().state || {};
   const [category, setCategory] = useState("Feature");
   const [feedbackTitle, setFeedbackTitle] = useState("");
   const [feedbackDetails, setFeebackDetails] = useState("");
@@ -37,7 +38,7 @@ const NewFeedback = () => {
 
   return (
     <div className="pf-f-container">
-      <GoBack addFeedBackLink={false} backUrl="/" />
+      <GoBack addFeedBackLink={false} backUrl={prev_url} />
       <div className="pf-main-container">
         <div className="pf-form-container">
           <img src={newFeedbackIcon} className="pf-f-icon" />

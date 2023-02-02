@@ -46,7 +46,7 @@ const RoadMap = () => {
 
   return (
     <div className="roadmap-container">
-      <SubNav hideDrop={true} showBackLink={true} />
+      <SubNav hideDrop={true} showBackLink={true} prev_url={"/"} />
       {/* road map tracker */}
       <div className="pf-roadmap-nav">
         <div className="pf-nav-top">

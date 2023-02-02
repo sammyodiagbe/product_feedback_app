@@ -21,12 +21,10 @@ function customDropDown(value, open, toggleFilter, suggesstionsLength) {
   );
 }
 
-const SubNav = ({ hideDrop, showBackLink }) => {
+const SubNav = ({ hideDrop, showBackLink, prev_url }) => {
   const context = useContext(dataContext);
-  const { state, pathname } = useLocation();
-  const { prev_url } = state || {};
+  const { pathname } = useLocation();
 
-  console.log(pathname);
   const {
     sortByMostUpvotes,
     sortByLeastUpvotes,
@@ -90,7 +88,7 @@ const SubNav = ({ hideDrop, showBackLink }) => {
       <Link
         className="pf-add-feedback"
         to="/new-feedback"
-        state={{ prev_url: "/roadmap" }}
+        state={{ prev_url: pathname }}
       >
         + Add Feedback
       </Link>
