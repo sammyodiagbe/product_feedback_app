@@ -253,9 +253,15 @@ div.product-app-container {
     
                 button.pf-upvote-button {
                     grid-area: pf-upvote;
-                    padding: .7em $padding;
+                    padding: .5em $padding;
                     background: $neutral_gray;
                     border-radius: $border_radius_link;
+                    transition: all .5s;
+                    cursor: pointer;
+                    &:hover {
+                        background: $bluish_marlin;
+                        color: $white;
+                    }
                 }
     
                 span.pf-comments {

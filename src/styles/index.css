@@ -311,9 +311,17 @@ div.product-app-container div.container main.pf-main-container div.pf-suggestion
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pf-upvote;
-  padding: 0.7em 1.2em;
+  padding: 0.5em 1.2em;
   background: #f2f4ff;
   border-radius: 8px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+div.product-app-container div.container main.pf-main-container div.pf-suggestion button.pf-upvote-button:hover {
+  background: #4661e6;
+  color: #ffffff;
 }
 
 div.product-app-container div.container main.pf-main-container div.pf-suggestion span.pf-comments {

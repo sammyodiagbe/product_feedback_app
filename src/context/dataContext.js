@@ -105,6 +105,19 @@ const DataContextProvider = ({ children }) => {
     // add new reply to the list of replies of the comment
   };
 
+  const upvoteSuggestion = (suggestionId) => {
+    let suggestionIndex = 0;
+    const suggestion = suggestions.find((s, index) => {
+      suggestionIndex = index;
+      return s.id.toString() === suggestionId.toString();
+    });
+
+    suggestion.upvotes = suggestion.upvotes ? suggestion.upvotes + 1 : 1;
+    const tempSuggestions = [...suggestions];
+    tempSuggestions[suggestionIndex] = suggestion;
+    setSuggestions(tempSuggestions);
+  };
+
   const addComment = (postid, commentsData) => {
     const commentStructure = {
       id: generateRandomId(8),
@@ -209,6 +222,7 @@ const DataContextProvider = ({ children }) => {
         editFeedback,
         replyToUser,
         addComment,
+        upvoteSuggestion,
       }}
     >
       {children}
