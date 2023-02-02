@@ -49,6 +49,10 @@ const EditFeedback = () => {
     });
   };
 
+  const deleteFeedback = () => {
+    context.deleteFeedback(id);
+  };
+
   return (
     <>
       <GoBack backUrl={`/feedback/${feedback.id}`} />
@@ -108,14 +112,16 @@ const EditFeedback = () => {
                 </span>
               )}
             </div>
-            <div className="pf-action-container">
-              <button className="pf-btn pf-create-account">
-                Edit Feedback
-              </button>
-              <button className="pf-btn pf-cancel">Cancel</button>
-              <button className="pf-btn pf-delete">Delete</button>
-            </div>
           </form>
+          <div className="pf-action-container">
+            <button className="pf-btn pf-create-account" onClick={editFeedback}>
+              Edit Feedback
+            </button>
+            <button className="pf-btn pf-cancel">Cancel</button>
+            <button className="pf-btn pf-delete" onClick={deleteFeedback}>
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </>

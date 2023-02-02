@@ -142,6 +142,14 @@ const DataContextProvider = ({ children }) => {
     setSuggestions(tempSuggestions);
   };
 
+  const deleteFeedback = (feedbackId) => {
+    const tempArr = [...suggestions];
+
+    tempArr = tempArr.filter(
+      (suggestion, index) => suggestion.id.toString() !== feedbackId.toString
+    );
+    setSuggestions(tempArr);
+  };
   const filterSuggestionList = (featureName) => {
     if (featureName == "All") {
       setSuggestions(tempSuggesstionHolder);
@@ -223,6 +231,7 @@ const DataContextProvider = ({ children }) => {
         replyToUser,
         addComment,
         upvoteSuggestion,
+        deleteFeedback,
       }}
     >
       {children}
