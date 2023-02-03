@@ -69,14 +69,27 @@ div.product-app-container {
                     padding: $padding;
                     background: #fff;
                     div.pf-replies {
-                        padding-left:  30px;
+                        // padding-left:  30px;
                     }
                     
                     div.pf-comment-content {
+                        position: relative;
+                        margin-bottom: 1em;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 25px;
+                            top: 80px;
+                            width: 1px;
+                            background-color: rgba(0,0,0,.1);
+                            height: calc(60% - 80px);
+                        }
+                        
                         div.pf-comment, div.pf-reply {
+                            position: relative;
                             
                             p.content {
-                                padding-left: 60px;
+                                // padding-left: 60px;
                                 b.replying-to {
                                     color: $call_to_action_purple;
                                 }
@@ -112,7 +125,7 @@ div.product-app-container {
 
                         div.reply-container {
                             padding: $padding 0;
-                            padding-left: 120px;
+                            // padding-left: 120px;
                             form {
                                 display: flex;
                                 justify-content: space-between;

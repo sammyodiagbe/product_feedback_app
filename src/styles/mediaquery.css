@@ -1,4 +1,13 @@
 @media screen and (min-width: 768px) {
+  div.product-app-container div.feedback-container-content div.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment p.content {
+    padding-left: 60px;
+  }
+  div.product-app-container div.feedback-container-content div.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-replies {
+    padding-left: 30px;
+  }
+  div.product-app-container div.feedback-container-content div.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.reply-container {
+    padding-left: 120px;
+  }
   div.product-app-container div.container main.pf-main-container {
     padding: 1.2em;
   }
@@ -106,6 +115,15 @@
 }
 
 @media screen and (min-width: 1440px) {
+  div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment p.content {
+    padding-left: 60px;
+  }
+  div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-replies {
+    padding-left: 30px;
+  }
+  div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.reply-container {
+    padding-left: 120px;
+  }
   div.product-app-container div.container {
     width: 1110px;
     margin: 0 auto;

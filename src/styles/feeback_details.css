@@ -77,12 +77,23 @@ div.product-app-container div.feedback-container-content main.pf-main-container 
   background: #fff;
 }
 
-div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-replies {
-  padding-left: 30px;
+div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content {
+  position: relative;
+  margin-bottom: 1em;
 }
 
-div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment p.content, div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-reply p.content {
-  padding-left: 60px;
+div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 80px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: calc(60% - 80px);
+}
+
+div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment, div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-reply {
+  position: relative;
 }
 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment p.content b.replying-to, div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-reply p.content b.replying-to {
@@ -129,7 +140,6 @@ div.product-app-container div.feedback-container-content main.pf-main-container 
 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.reply-container {
   padding: 1.2em 0;
-  padding-left: 120px;
 }
 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.reply-container form {

@@ -8,6 +8,28 @@
         
         // main-container }
         
+        div.feedback-container-content {
+
+          div.pf-main-container {
+            div.pf-comment-container {
+              div.pf-comments{
+                div.pf-comment-content {
+                  div.pf-comment {
+                    p.content {
+                      padding-left: 60px;
+                    }
+                  }
+                  div.pf-replies {
+                    padding-left: 30px;
+                  }
+                  div.reply-container {
+                    padding-left: 120px;
+                  }
+                }
+              }
+            }
+          }
+        }
         div.container {
             
             main.pf-main-container {
@@ -119,6 +141,29 @@
 @media screen and (min-width: $desktop) {
 
     div.product-app-container {
+
+      div.feedback-container-content {
+
+        main.pf-main-container {
+          div.pf-comment-container {
+            div.pf-comments{
+              div.pf-comment-content {
+                div.pf-comment {
+                  p.content {
+                    padding-left: 60px;
+                  }
+                }
+                div.pf-replies {
+                  padding-left: 30px;
+                }
+                div.reply-container {
+                  padding-left: 120px;
+                }
+              }
+            }
+          }
+        }
+      }
         div.container {
             width: $desktop_screen_width;
             margin: 0 auto;
