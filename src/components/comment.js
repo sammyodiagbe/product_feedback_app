@@ -53,21 +53,23 @@ const Comment = ({ data }) => {
       : null
     : null;
   return (
-    <div className="pf-comment-container">
+    <div className="pf-comment-content">
       <div className="pf-comment">
         {/* <div className="pf-comment-head"> */}
-        <img src={url} alt="user profile picture" className="user-image" />
-        <div className="pf-name">
-          <h3>{name}</h3>
-          <p>@{username}</p>
+        <div className="pf-comment-head">
+          <img src={url} alt="user profile picture" className="user-image" />
+          <div className="pf-name">
+            <h3>{name}</h3>
+            <p>@{username}</p>
+          </div>
+          <button
+            className="reply-toggle"
+            onClick={setReplyReciever}
+            data-username={username}
+          >
+            reply
+          </button>
         </div>
-        <button
-          className="reply-toggle"
-          onClick={setReplyReciever}
-          data-username={username}
-        >
-          reply
-        </button>
         <p className="content">
           {replyingTo && <b className="replying-to">@{replyingTo} </b>}
           {content}
@@ -87,6 +89,7 @@ const Comment = ({ data }) => {
               className="reply-box"
               value={replyMessage}
               onChange={(event) => setReplyMessage(event.target.value)}
+              placeholder="Your response here"
             ></textarea>
             <button className="reply-btn">Post reply</button>
           </form>

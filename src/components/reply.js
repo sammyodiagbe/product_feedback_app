@@ -6,20 +6,22 @@ const Reply = ({ data, setReplyReciever }) => {
 
   return (
     <>
-      <div className="pf-comment">
+      <div className="pf-reply">
         {/* <div className="pf-comment-head"> */}
-        <img src={url} alt="user profile picture" className="user-image" />
-        <div className="pf-name">
-          <h3>{name}</h3>
-          <p>@{username}</p>
+        <div className="pf-comment-head">
+          <img src={url} alt="user profile picture" className="user-image" />
+          <div className="pf-name">
+            <h3>{name}</h3>
+            <p>@{username}</p>
+          </div>
+          <button
+            className="reply-toggle"
+            onClick={setReplyReciever}
+            data-username={username}
+          >
+            reply
+          </button>
         </div>
-        <button
-          className="reply-toggle"
-          onClick={setReplyReciever}
-          data-username={username}
-        >
-          reply
-        </button>
         <p className="content">
           {replyingTo && <b className="replying-to">@{replyingTo} </b>}
           {content}

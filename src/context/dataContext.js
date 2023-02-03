@@ -79,7 +79,6 @@ const DataContextProvider = ({ children }) => {
   };
 
   const replyToUser = (postId, commentId, reply, repliedTo) => {
-    console.log(postId, reply, repliedTo);
     const replyStructure = {
       content: reply,
       replyingTo: repliedTo,
@@ -94,10 +93,12 @@ const DataContextProvider = ({ children }) => {
 
     const comment = post.comments.find((comment, ind) => {
       commentIndex = ind;
-      return comment.id.toString() === commentId;
+      return comment.id.toString() === commentId.toString();
     });
 
-    const replies = comment.replies ? [...post.comments.replies] : [];
+    const replies = comment.replies ? [...comment.replies] : [];
+    console.log(replies);
+
     replies.push(replyStructure);
     comment.replies = replies;
     post.comments[commentIndex] = comment;

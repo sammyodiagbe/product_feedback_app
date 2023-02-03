@@ -51,6 +51,9 @@ div.product-app-container {
             }
     
             div.pf-comment-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                background: orange;
                     div.pf-total-comments {
                         padding:$padding;
                         background:$white;
@@ -68,41 +71,74 @@ div.product-app-container {
                     div.pf-replies {
                         padding-left:  30px;
                     }
+                    
+                    div.pf-comment-content {
+                        div.pf-comment, div.pf-reply {
+                            
+                            p.content {
+                                padding-left: 60px;
+                                b.replying-to {
+                                    color: $call_to_action_purple;
+                                }
+
+                            }
+                            div.pf-comment-head {
+                                grid-area: pf-head;
+                                display: grid;
+                                grid-template-columns: max-content max-content max-content;
+                                grid-template-areas: "pf-img pf-name . pf-reply";
+                                padding: $padding 0;
+                                img.user-image {
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50px;
+                                    grid-area: pf-img;
+                                    margin-right: 10px;
+                                }
     
-                    div.pf-comment {
-                        display: grid;
-                        grid-template-areas: "user-image pf-name . reply-toggle"
-                        ". content content content"; 
-                        grid-row-gap: 1rem;
-                        padding: $padding 0;
-                        
-                        img.user-image {
-                            grid-area: user-image;
-                            height: 50px;
-                            width: 50px;
-                            border-radius: 50px;
-                            margin-right: 10px;
-                        }
-                        div.pf-name {
-                            grid-area: pf-name;
-                            h3{
-                                font-size: 18px;
+                                div.pf-name {
+                                    grid-area:pf-name;
+                                }
+    
+                                button.reply-toggle {
+                                    display: inline-block;
+                                    justify-self: end;
+                                    color: blue;
+                                    font-size: .9em;
+                                    grid-area:pf-reply;
+                                }
                             }
                         }
-                        button.reply-toggle{
-                            grid-area: reply-toggle;
-                            color: $bluish_marlin;
-                            font-size:.9em;
-                            &:hover {
-                                text-decoration: underline;
+
+                        div.reply-container {
+                            padding: $padding 0;
+                            padding-left: 120px;
+                            form {
+                                display: flex;
+                                justify-content: space-between;
+
+                                textarea {
+                                    flex: 1;
+                                    border: 3px solid $call_to_action_mobile;
+                                    margin-right: 10px;
+                                    padding: $padding;
+                                    font-size: .9em;
+                                    border-radius: $border_radius_link;
+
+                                    
+                                }
+
+                                button.reply-btn {
+                                    background: $call_to_action_purple;
+                                    color: $white;
+                                    align-self: flex-start;
+                                    padding: $padding;
+                                    font-weight: bold;
+                                    border-radius: $border_radius_link;
+                                }
                             }
-                        }
-                        p.content {
-                            grid-area: content;
-                            b.replying-to {
-                                color: #AD1FEA;
-                            }
-                        }
+
+                        }   
                     }
                 }
             }
