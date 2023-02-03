@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { dataContext } from "../context/dataContext";
+import { useParams } from "react-router-dom";
 import Reply from "./reply";
 
 const Comment = ({ data }) => {
   const { id, user, content, replies, replyingTo } = data;
+  const context = useContext(dataContext);
+  const { id: postId } = useParams();
 
   const [userToReplyTo, setUserToReplyTo] = useState("");
   const [showReplyBox, setShowReplyBox] = useState(false);
+  const [replyMessage, setReplyMessage] = useState("");
 
   const { username, name, image } = user;
   const url = "." + image;
@@ -17,6 +22,17 @@ const Comment = ({ data }) => {
     if (!showReplyBox) {
       setShowReplyBox(true);
     }
+  };
+
+  const replyToUser = (event) => {
+    //  IF THE REPLY BOX IS OPEN then
+    event.preventDefault();
+    if (replyMessage !== "") {
+      setReplyMessage("");
+    }
+
+    // we are replying to the user of this comment on this post as the logged on user
+    context.replyToUser(postId, id, replyMessage, userToReplyTo);
   };
 
   const repliesStructure = replies
@@ -63,6 +79,19 @@ const Comment = ({ data }) => {
           <div className="pf-replies">{repliesStructure}</div>
         )}
       </div>
+      {showReplyBox && (
+        <div className="reply-container">
+          <form onSubmit={replyToUser}>
+            <textarea
+              maxLength={250}
+              className="reply-box"
+              value={replyMessage}
+              onChange={(event) => setReplyMessage(event.target.value)}
+            ></textarea>
+            <button className="reply-btn">Post reply</button>
+          </form>
+        </div>
+      )}
     </div>
   );
 };
