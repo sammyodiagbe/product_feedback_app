@@ -1,28 +1,14 @@
-import { useContext, useState } from "react";
-import { useParams } from "react-router-dom";
-import { dataContext } from "../context/dataContext";
+import { useState } from "react";
+import Reply from "./reply";
 
 const Comment = ({ data }) => {
   const { id, user, content, replies, replyingTo } = data;
-  const { id: postId } = useParams();
-  const context = useContext(dataContext);
+
+  const [userToReplyTo, setUserToReplyTo] = useState("");
+  const [showReplyBox, setShowReplyBox] = useState(false);
 
   const { username, name, image } = user;
   const url = "." + image;
-  const [replyMessage, setReplyMessage] = useState("");
-  const [showReplyBox, setShowReplyBox] = useState(false);
-  const [userToReplyTo, setUserToReplyTo] = useState(username);
-
-  const replyToUser = (event) => {
-    //  IF THE REPLY BOX IS OPEN then
-    event.preventDefault();
-    if (replyMessage !== "") {
-      setReplyMessage("");
-    }
-
-    // we are replying to the user of this comment on this post as the logged on user
-    context.replyToUser(postId, id, replyMessage, userToReplyTo);
-  };
 
   const setReplyReciever = (event) => {
     const { target } = event;
@@ -36,7 +22,17 @@ const Comment = ({ data }) => {
   const repliesStructure = replies
     ? replies.length
       ? replies.map((reply, index) => {
-          return <Comment data={reply} key={index} />;
+          return (
+            <Reply
+              data={reply}
+              key={index}
+              setReplyReciever={setReplyReciever}
+              userToReplyTo={userToReplyTo}
+              showReplyBox={showReplyBox}
+              setShowReplyBox={setShowReplyBox}
+              id={id}
+            />
+          );
         })
       : null
     : null;
@@ -65,19 +61,6 @@ const Comment = ({ data }) => {
       <div className="pf-replies">
         {repliesStructure && (
           <div className="pf-replies">{repliesStructure}</div>
-        )}
-        {showReplyBox && (
-          <div className="reply-container">
-            <form onSubmit={replyToUser}>
-              <textarea
-                maxLength={250}
-                className="reply-box"
-                value={replyMessage}
-                onChange={(event) => setReplyMessage(event.target.value)}
-              ></textarea>
-              <button className="reply-btn">Post reply</button>
-            </form>
-          </div>
         )}
       </div>
     </div>
