@@ -80,6 +80,7 @@ div.product-app-container div.feedback-container-content main.pf-main-container 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content {
   position: relative;
   margin-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content::before {
@@ -89,7 +90,7 @@ div.product-app-container div.feedback-container-content main.pf-main-container 
   top: 80px;
   width: 1px;
   background-color: rgba(0, 0, 0, 0.1);
-  height: calc(60% - 80px);
+  height: calc(60%);
 }
 
 div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-comment, div.product-app-container div.feedback-container-content main.pf-main-container div.pf-comment-container div.pf-comments div.pf-comment-content div.pf-reply {
